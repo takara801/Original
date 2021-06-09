@@ -89,6 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="xjI-TF-olI" id="0vE-XE-vcX"/>
+                        <outlet property="treeImageView" destination="vtY-Zj-ZFQ" id="CTR-f0-HOB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dor-1R-5uD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

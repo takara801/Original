@@ -11,6 +11,8 @@ class ResultViewController: UIViewController {
 
     @IBOutlet var countLabel: UILabel!
     
+    @IBOutlet var treeImageView: UILabel!
+    
     var count: Int = 0
     
     var timer: Timer = Timer()
@@ -41,7 +43,21 @@ class ResultViewController: UIViewController {
                                          repeats: true
             )
         }
+        if count >=10 {
+            treeImageView.image = UIImage(name: "tree1")
+        }else if count >=15{
+            treeImageView.image = UIImage(name: "tree2")
+        }else if count >=20{
+            treeImageView.image = UIImage(name: "tree3")
+        }else if count >=25{
+            treeImageView.image = UIImage(name: "tree4")
+        }else if count >=30{
+            treeImageView.image = UIImage(name: "tree5")
+        }else if count >=35{
+            treeImageView.image = UIImage(name: "tree6")
+        }
     }
+
     
     @IBAction func stop() {
             if timer.isValid {
