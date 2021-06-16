@@ -11,7 +11,7 @@ class ResultViewController: UIViewController {
 
     @IBOutlet var countLabel: UILabel!
     
-    @IBOutlet var treeImageView: UILabel!
+    @IBOutlet var treeImageView: UIImageView!
     
     var count: Int = 0
     
@@ -32,6 +32,9 @@ class ResultViewController: UIViewController {
                 let minutes = (count % 3600) / 60
                 let seconds = count % 60
                 countLabel.text = String(format: "%02d:%02d:%02d%", hours, minutes, seconds)
+        
+        changeImage()
+        
     }
 
     @IBAction func start () {
@@ -41,21 +44,9 @@ class ResultViewController: UIViewController {
                                          selector: #selector(self.up),
                                          userInfo: nil,
                                          repeats: true
-            )
+                                        )
         }
-        if count >=10 {
-            treeImageView.image = UIImage(name: "tree1")
-        }else if count >=15{
-            treeImageView.image = UIImage(name: "tree2")
-        }else if count >=20{
-            treeImageView.image = UIImage(name: "tree3")
-        }else if count >=25{
-            treeImageView.image = UIImage(name: "tree4")
-        }else if count >=30{
-            treeImageView.image = UIImage(name: "tree5")
-        }else if count >=35{
-            treeImageView.image = UIImage(name: "tree6")
-        }
+       
     }
 
     
@@ -68,9 +59,22 @@ class ResultViewController: UIViewController {
     @IBAction func back() {
         self.dismiss(animated: true, completion: nil)
     }
+    func changeImage(){
     
-    
-    
+     if count <= 10 {
+        treeImageView.image = UIImage(named: "tree1")
+      }else if count <= 15 && count > 10 {
+        treeImageView.image = UIImage(named: "tree2")
+      }else if count <= 20 && count > 15 {
+        treeImageView.image = UIImage(named: "tree3")
+      }else if count <= 25 && count > 20 {
+        treeImageView.image = UIImage(named: "tree4")
+      }else if count <= 30 && count > 25 {
+        treeImageView.image = UIImage(named: "tree5")
+      }else if count <= 35 && count > 30 {
+        treeImageView.image = UIImage(named: "tree6")
+    }
+}
     
     
     

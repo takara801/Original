@@ -15,6 +15,7 @@
 		CE14665025CAB12A000D89A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE14664E25CAB12A000D89A9 /* LaunchScreen.storyboard */; };
 		CE14665B25CAB12B000D89A9 /* OriginalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14665A25CAB12B000D89A9 /* OriginalTests.swift */; };
 		CE14666625CAB12B000D89A9 /* OriginalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14666525CAB12B000D89A9 /* OriginalUITests.swift */; };
+		CE31210C267A0C5000B957CE /* tree 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE31210B267A0C5000B957CE /* tree 1.jpeg */; };
 		CE98BC9125D3C32000C94160 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98BC9025D3C32000C94160 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		CE14666125CAB12B000D89A9 /* OriginalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OriginalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE14666525CAB12B000D89A9 /* OriginalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalUITests.swift; sourceTree = "<group>"; };
 		CE14666725CAB12B000D89A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE31210B267A0C5000B957CE /* tree 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tree 1.jpeg"; sourceTree = "<group>"; };
 		CE98BC9025D3C32000C94160 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 		CE14664225CAB125000D89A9 /* Original */ = {
 			isa = PBXGroup;
 			children = (
+				CE31210B267A0C5000B957CE /* tree 1.jpeg */,
 				CE14664325CAB125000D89A9 /* AppDelegate.swift */,
 				CE14664525CAB126000D89A9 /* SceneDelegate.swift */,
 				CE14664725CAB126000D89A9 /* ViewController.swift */,
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE31210C267A0C5000B957CE /* tree 1.jpeg in Resources */,
 				CE14665025CAB12A000D89A9 /* LaunchScreen.storyboard in Resources */,
 				CE14664D25CAB12A000D89A9 /* Assets.xcassets in Resources */,
 				CE14664B25CAB126000D89A9 /* Main.storyboard in Resources */,
