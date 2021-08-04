@@ -22,7 +22,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="勉強を始める"/>
                                 <connections>
-                                    <segue destination="BGi-kw-HM6" kind="presentation" id="WdR-Q1-iLJ"/>
+                                    <segue destination="BGi-kw-HM6" kind="presentation" id="b2s-Oj-9EZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,7 +48,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="終了"/>
                                 <connections>
-                                    <action selector="back" destination="BGi-kw-HM6" eventType="touchUpInside" id="Bmx-Pd-fzr"/>
+                                    <segue destination="8cN-QA-vN4" kind="presentation" id="Mpi-rA-gxL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q28-CA-Rqz">
@@ -76,28 +76,59 @@
                                     <action selector="start" destination="BGi-kw-HM6" eventType="touchUpInside" id="eR2-8O-gty"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtY-Zj-ZFQ">
-                                <rect key="frame" x="148" y="370" width="119" height="102"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree1" translatesAutoresizingMaskIntoConstraints="NO" id="bT5-45-C3b">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="74L-uq-6t3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="xjI-TF-olI" id="0vE-XE-vcX"/>
-                        <outlet property="treeImageView" destination="vtY-Zj-ZFQ" id="CTR-f0-HOB"/>
+                        <outlet property="treeImageView" destination="bT5-45-C3b" id="YVJ-5L-gUv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dor-1R-5uD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="647.82608695652175" y="76.339285714285708"/>
         </scene>
+        <!--Result View Controller2-->
+        <scene sceneID="rES-Ba-UIG">
+            <objects>
+                <viewController id="8cN-QA-vN4" customClass="ResultViewController2" customModule="Original" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uyQ-Hh-XZi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pus-xx-7Yf">
+                                <rect key="frame" x="292" y="488" width="84" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="しない"/>
+                                <connections>
+                                    <action selector="back" destination="8cN-QA-vN4" eventType="touchUpInside" id="TfB-y7-dKZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECv-on-VLI">
+                                <rect key="frame" x="32" y="459" width="189" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="twitter投稿する"/>
+                                <connections>
+                                    <action selector="Twittew" destination="8cN-QA-vN4" eventType="touchUpInside" id="cP6-os-4Pw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s6U-tU-BNr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8g-uC-0Mb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462.3188405797102" y="75.669642857142847"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="tree1" width="828" height="1792"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

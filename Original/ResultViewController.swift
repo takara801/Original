@@ -56,9 +56,7 @@ class ResultViewController: UIViewController {
             }
     }
     
-    @IBAction func back() {
-        self.dismiss(animated: true, completion: nil)
-    }
+   
     func changeImage(){
     
      if count <= 10 {
@@ -68,11 +66,11 @@ class ResultViewController: UIViewController {
       }else if count <= 20 && count > 15 {
         treeImageView.image = UIImage(named: "tree3")
       }else if count <= 25 && count > 20 {
-        treeImageView.image = UIImage(named: "tree4")
+        treeImageView.image = UIImage(named: "tree1")
       }else if count <= 30 && count > 25 {
-        treeImageView.image = UIImage(named: "tree5")
+        treeImageView.image = UIImage(named: "tree2")
       }else if count <= 35 && count > 30 {
-        treeImageView.image = UIImage(named: "tree6")
+        treeImageView.image = UIImage(named: "tree3")
     }
 }
     
