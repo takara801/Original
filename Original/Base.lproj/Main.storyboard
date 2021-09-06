@@ -51,10 +51,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree1" translatesAutoresizingMaskIntoConstraints="NO" id="bT5-45-C3b">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="D7l-Yc-iFN">
                                 <rect key="frame" x="67.5" y="716" width="279" height="60"/>
                                 <subviews>
@@ -63,23 +59,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="開始"/>
                                         <connections>
-                                            <action selector="start" destination="BGi-kw-HM6" eventType="touchUpInside" id="eR2-8O-gty"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FE-UD-Est">
-                                        <rect key="frame" x="99" y="0.0" width="81" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="終了"/>
-                                        <connections>
-                                            <segue destination="8cN-QA-vN4" kind="presentation" id="Mpi-rA-gxL"/>
+                                            <action selector="start" destination="BGi-kw-HM6" eventType="touchUpInside" id="OBF-hh-KrX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q28-CA-Rqz">
-                                        <rect key="frame" x="198" y="0.0" width="81" height="60"/>
+                                        <rect key="frame" x="99" y="0.0" width="81" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="休憩"/>
                                         <connections>
-                                            <action selector="stop" destination="BGi-kw-HM6" eventType="touchUpInside" id="yGT-Hy-wuz"/>
+                                            <action selector="pause" destination="BGi-kw-HM6" eventType="touchUpInside" id="PIf-1d-Wc2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FE-UD-Est">
+                                        <rect key="frame" x="198" y="0.0" width="81" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="終了"/>
+                                        <connections>
+                                            <action selector="reset" destination="BGi-kw-HM6" eventType="touchUpInside" id="i1w-0a-EMD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -94,8 +90,9 @@
                             <constraint firstItem="D7l-Yc-iFN" firstAttribute="centerX" secondItem="8Du-sb-75b" secondAttribute="centerX" id="y45-5G-bHt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="U3J-ML-EYy"/>
                     <connections>
-                        <outlet property="countLabel" destination="xjI-TF-olI" id="0vE-XE-vcX"/>
+                        <outlet property="countLabel" destination="xjI-TF-olI" id="T4N-7v-iTU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dor-1R-5uD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,7 +104,7 @@
             <objects>
                 <viewController id="8cN-QA-vN4" customClass="ResultViewController2" customModule="Original" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uyQ-Hh-XZi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pus-xx-7Yf">
@@ -137,7 +134,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tree1" width="828" height="1792"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		26F386C9280E5A2FA47ADD54 /* Pods_Original_OriginalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2632328CBEFB37A89F48F53B /* Pods_Original_OriginalUITests.framework */; };
+		5DC27FB826E5F56A00D6A230 /* 75406-looped-404-error-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5DC27FB726E5F56A00D6A230 /* 75406-looped-404-error-animation.json */; };
 		77E8B42A8233C59F52E8102F /* Pods_OriginalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB27FCE8245A65AF228BAEA /* Pods_OriginalTests.framework */; };
 		95D9D7EC42BCB1E1B18A5741 /* Pods_Original.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D532677251043D0A43133DF /* Pods_Original.framework */; };
 		CE14664425CAB125000D89A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14664325CAB125000D89A9 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		2632328CBEFB37A89F48F53B /* Pods_Original_OriginalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Original_OriginalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D532677251043D0A43133DF /* Pods_Original.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Original.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		542B3C8730AD922BD3234D47 /* Pods-Original-OriginalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Original-OriginalUITests.debug.xcconfig"; path = "Target Support Files/Pods-Original-OriginalUITests/Pods-Original-OriginalUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DC27FB726E5F56A00D6A230 /* 75406-looped-404-error-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "75406-looped-404-error-animation.json"; sourceTree = "<group>"; };
 		A158982ADDA5B1F49EE4F7F1 /* Pods-Original-OriginalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Original-OriginalUITests.release.xcconfig"; path = "Target Support Files/Pods-Original-OriginalUITests/Pods-Original-OriginalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B6AE125447874C2E06C83E98 /* Pods-Original.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Original.debug.xcconfig"; path = "Target Support Files/Pods-Original/Pods-Original.debug.xcconfig"; sourceTree = "<group>"; };
 		C2B3C1683F039F2966D14758 /* Pods-OriginalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OriginalTests.release.xcconfig"; path = "Target Support Files/Pods-OriginalTests/Pods-OriginalTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,7 +109,6 @@
 				E53BB9E9FA14AA28928414B0 /* Pods-OriginalTests.debug.xcconfig */,
 				C2B3C1683F039F2966D14758 /* Pods-OriginalTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,13 +147,14 @@
 		CE14664225CAB125000D89A9 /* Original */ = {
 			isa = PBXGroup;
 			children = (
-				CE236EA626DBB753000CA083 /* tree1.json */,
 				CE14664325CAB125000D89A9 /* AppDelegate.swift */,
 				CE14664525CAB126000D89A9 /* SceneDelegate.swift */,
 				CE14664725CAB126000D89A9 /* ViewController.swift */,
 				CE14664925CAB126000D89A9 /* Main.storyboard */,
 				CE14664C25CAB12A000D89A9 /* Assets.xcassets */,
 				CE14664E25CAB12A000D89A9 /* LaunchScreen.storyboard */,
+				CE236EA626DBB753000CA083 /* tree1.json */,
+				5DC27FB726E5F56A00D6A230 /* 75406-looped-404-error-animation.json */,
 				CE14665125CAB12A000D89A9 /* Info.plist */,
 				CE98BC9025D3C32000C94160 /* ResultViewController.swift */,
 				CECA377226BA9EF8003D9644 /* ResultViewController2.swift */,
@@ -290,6 +292,7 @@
 				CE14665025CAB12A000D89A9 /* LaunchScreen.storyboard in Resources */,
 				CE14664D25CAB12A000D89A9 /* Assets.xcassets in Resources */,
 				CE14664B25CAB126000D89A9 /* Main.storyboard in Resources */,
+				5DC27FB826E5F56A00D6A230 /* 75406-looped-404-error-animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
