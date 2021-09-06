@@ -86,12 +86,11 @@
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="xjI-TF-olI" id="0vE-XE-vcX"/>
-                        <outlet property="treeImageView" destination="bT5-45-C3b" id="YVJ-5L-gUv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dor-1R-5uD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="647.82608695652175" y="76.339285714285708"/>
+            <point key="canvasLocation" x="729" y="64"/>
         </scene>
         <!--Result View Controller2-->
         <scene sceneID="rES-Ba-UIG">
@@ -124,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8g-uC-0Mb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462.3188405797102" y="75.669642857142847"/>
+            <point key="canvasLocation" x="1519" y="64"/>
         </scene>
     </scenes>
     <resources>
