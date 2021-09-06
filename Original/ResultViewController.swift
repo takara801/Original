@@ -15,9 +15,8 @@ class ResultViewController: UIViewController {
     
     var timeCount: Int = 0
     var timer: Timer = Timer()
-//
-//    //AnimationViewの宣言
-//    var animationView = AnimationView()
+    //AnimationViewの宣言
+    var animationView = AnimationView()
     
   
     
@@ -25,8 +24,8 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        //アニメーションの呼び出し
-//        addAnimationView()
+        //アニメーションの呼び出し
+        addAnimationView()
     }
 
     //タイマーを開始するメソッド
@@ -69,23 +68,23 @@ class ResultViewController: UIViewController {
         countLabel.text = String(timeCount)
     }
     
-//    //アニメーションの準備
-//    func addAnimationView() {
-//
-//        //アニメーションファイルの指定
-//        animationView = AnimationView(name: "75406-looped-404-error-animation") //ここに先ほどダウンロードしたファイル名を記述（拡張子は必要なし）
-//
-//        //アニメーションの位置指定（画面中央）
-//        animationView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
-//
-//        //アニメーションのアスペクト比を指定＆ループで開始
-//        animationView.contentMode = .scaleAspectFit
-//        animationView.loopMode = .loop
-//        animationView.play()
-//
-//        //ViewControllerに配置
-//        view.addSubview(animationView)
-//    }
+    //アニメーションの準備
+    func addAnimationView() {
+
+        //アニメーションファイルの指定
+        animationView = AnimationView(name: "75406-looped-404-error-animation") //ここに先ほどダウンロードしたファイル名を記述（拡張子は必要なし）
+
+        //アニメーションの位置指定（画面中央）
+        animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+
+        //アニメーションのアスペクト比を指定＆ループで開始
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.play()
+
+        //ViewControllerに配置
+        view.addSubview(animationView)
+    }
     
    
 //    func changeImage(){
