@@ -72,7 +72,7 @@ class ResultViewController: UIViewController {
     func addAnimationView() {
 
         //アニメーションファイルの指定
-        animationView = AnimationView(name: "75406-looped-404-error-animation") //ここに先ほどダウンロードしたファイル名を記述（拡張子は必要なし）
+        animationView = AnimationView(name: "75406-looped-404-error-animetion") //ここに先ほどダウンロードしたファイル名を記述（拡張子は必要なし）
 
         //アニメーションの位置指定（画面中央）
         animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
