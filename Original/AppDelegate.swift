@@ -7,12 +7,21 @@
 
 import UIKit
 
+import  RealmSwift
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let confing = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: nil,
+            deleteRealmIfMigrationNeeded: true)
+        
+        Realm.Configuration.defaultConfiguration = confing
+        
         // Override point for customization after application launch.
         return true
     }

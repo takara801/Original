@@ -9,20 +9,30 @@ import UIKit
 import Lottie //Lottieのインポート
 
 class ResultViewController: UIViewController {
-
+    
+    override func prepare(for segue: UIStoryboardSegue , sender: Any?) {
+        let resultShareViewController:ResultShareViewController = segue.destination as! ResultShareViewController; resultShareViewController.timeCount = Int(self.timeCount)
+            mokuhyou = mokuhyouTextField.text 
+            resultShareViewController.mokuhyou = self.mokuhyou
+    }
+    
+    
+    @IBOutlet var mokuhyouTextField: UITextField!
     @IBOutlet var countLabel: UILabel!
 //    @IBOutlet var treeImageView: UIImageView!
     
+    var mokuhyou: String!
     var timeCount: Int = 0
     var timer: Timer = Timer()
     //AnimationViewの宣言
     var animationView = AnimationView()
     
-  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        mokuhyouTextField.placeholder = "目標を入力 "
         
         //アニメーションの呼び出し
         addAnimationView()
@@ -32,6 +42,7 @@ class ResultViewController: UIViewController {
     @IBAction func start () {
         
         print("Timing started!")
+        animationView.play()
         if !timer.isValid {
             //タイマーが動作していなかったら動かす
             timer = Timer.scheduledTimer(timeInterval: 1,
@@ -51,11 +62,13 @@ class ResultViewController: UIViewController {
         let minutes = (timeCount % 3600) / 60
         let seconds = timeCount % 60
         countLabel.text = String(format: "%02d:%02d:%02d%", hours, minutes, seconds)
+        changeImage()
     }
     
     
     //タイマーを停止するメソッド
     @IBAction func pause() {
+        animationView.pause()
         if timer.isValid {
                 //タイマーが動作していたら停止する
                 timer.invalidate()
@@ -72,23 +85,37 @@ class ResultViewController: UIViewController {
     func addAnimationView() {
 
         //アニメーションファイルの指定
-        animationView = AnimationView(name: "75406-looped-404-error-animetion") //ここに先ほどダウンロードしたファイル名を記述（拡張子は必要なし）
+        animationView = AnimationView(name: "03original animation") //ここに先ほどダウンロードしたファイル名を記述（拡張子は必要なし）
 
+        if timeCount == 10 {
+            animationView = AnimationView(name: "75406-looped-404-error-animation")
+        }else if timeCount == 15 {
+            animationView = AnimationView(name: "tree3")
+        }else if timeCount == 20 {
+            animationView = AnimationView(name: "tree4")
+        }
+    
+        
         //アニメーションの位置指定（画面中央）
-        animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        animationView.frame = CGRect(x: 50, y: 160, width: view.frame.size.width/1.5, height: view.frame.size.height/2)
 
         //アニメーションのアスペクト比を指定＆ループで開始
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
-        animationView.play()
+//        animationView.play()
 
         //ViewControllerに配置
         view.addSubview(animationView)
     }
     
    
-//    func changeImage(){
-//
+    
+    func changeImage(){
+        if timeCount == 10 || timeCount == 15 || timeCount == 20{
+            animationView.removeFromSuperview()
+            addAnimationView()
+            
+        }
 //     if count <= 10 {
 //
 //      }else if count <= 15 && count > 10 {
@@ -110,3 +137,4 @@ class ResultViewController: UIViewController {
 }
 
 
+}
