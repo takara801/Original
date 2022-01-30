@@ -30,7 +30,7 @@
 		CEBBC3C02769FD110013F746 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CEBBC3BF2769FD110013F746 /* Realm */; };
 		CEBBC3C22769FD120013F746 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBBC3C12769FD120013F746 /* RealmSwift */; };
 		CEBBC3C4276A00030013F746 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBC3C3276A00030013F746 /* Memo.swift */; };
-		CEBBC44E2798236B0013F746 /* ResultRelmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBC44D2798236B0013F746 /* ResultRelmeViewController.swift */; };
+		CEBBC44E2798236B0013F746 /* ResultRealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBC44D2798236B0013F746 /* ResultRealmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,7 @@
 		CE4C69FD2745046D001AB6AD /* ResultSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSaveViewController.swift; sourceTree = "<group>"; };
 		CE98BC9025D3C32000C94160 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CEBBC3C3276A00030013F746 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
-		CEBBC44D2798236B0013F746 /* ResultRelmeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRelmeViewController.swift; sourceTree = "<group>"; };
+		CEBBC44D2798236B0013F746 /* ResultRealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRealmViewController.swift; sourceTree = "<group>"; };
 		DCB27FCE8245A65AF228BAEA /* Pods_OriginalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OriginalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53BB9E9FA14AA28928414B0 /* Pods-OriginalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OriginalTests.debug.xcconfig"; path = "Target Support Files/Pods-OriginalTests/Pods-OriginalTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,7 +182,7 @@
 				CE4C69BB2732A423001AB6AD /* ResultShareViewController.swift */,
 				CE4C69FD2745046D001AB6AD /* ResultSaveViewController.swift */,
 				CEBBC3C3276A00030013F746 /* Memo.swift */,
-				CEBBC44D2798236B0013F746 /* ResultRelmeViewController.swift */,
+				CEBBC44D2798236B0013F746 /* ResultRealmViewController.swift */,
 			);
 			path = Original;
 			sourceTree = "<group>";
@@ -461,7 +461,7 @@
 				CE14664425CAB125000D89A9 /* AppDelegate.swift in Sources */,
 				CE14664625CAB126000D89A9 /* SceneDelegate.swift in Sources */,
 				CE4C69BC2732A423001AB6AD /* ResultShareViewController.swift in Sources */,
-				CEBBC44E2798236B0013F746 /* ResultRelmeViewController.swift in Sources */,
+				CEBBC44E2798236B0013F746 /* ResultRealmViewController.swift in Sources */,
 				CE4C69FE2745046D001AB6AD /* ResultSaveViewController.swift in Sources */,
 				CE98BC9125D3C32000C94160 /* ResultViewController.swift in Sources */,
 			);
