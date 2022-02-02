@@ -17,6 +17,10 @@ import RealmSwift
 
 class ResultRealmViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var timeCount: Int!
+    
+    var mokuhyou: String!
+    
     
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField2: UITextField!
@@ -48,18 +52,23 @@ class ResultRealmViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//    @IBAction func back() {
+    //        self.
+    //    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let memoData = realm.objects(Memo.self)
-        cell.textLabel!.text = "\(memoData[indexPath.row].name)さん"
-        cell.detailTextLabel!.text = String("\(memoData[indexPath.row].age)歳")
-        return cell
+        return memoData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let memoData = realm.objects(Memo.self)
+        cell.textLabel!.text = "\(memoData[indexPath.row].mokuhyou ?? "nil")さん"
+        cell.detailTextLabel!.text = String("\(memoData[indexPath.row].age)歳")
         return cell
     }
+    
     
 }
 
