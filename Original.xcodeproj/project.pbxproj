@@ -19,14 +19,17 @@
 		CE14665025CAB12A000D89A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE14664E25CAB12A000D89A9 /* LaunchScreen.storyboard */; };
 		CE14665B25CAB12B000D89A9 /* OriginalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14665A25CAB12B000D89A9 /* OriginalTests.swift */; };
 		CE14666625CAB12B000D89A9 /* OriginalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14666525CAB12B000D89A9 /* OriginalUITests.swift */; };
-		CE236EBE26E8BAB6000CA083 /* original animation 2.json in Resources */ = {isa = PBXBuildFile; fileRef = CE236EBD26E8BAB5000CA083 /* original animation 2.json */; };
-		CE42E520272019460093D4AA /* tree1.json in Resources */ = {isa = PBXBuildFile; fileRef = CE42E51F272019460093D4AA /* tree1.json */; };
-		CE42E52227201D630093D4AA /* tree3.json in Resources */ = {isa = PBXBuildFile; fileRef = CE42E52127201D630093D4AA /* tree3.json */; };
-		CE42E52427202AD90093D4AA /* daruma.json in Resources */ = {isa = PBXBuildFile; fileRef = CE42E52327202AD90093D4AA /* daruma.json */; };
 		CE4C69BC2732A423001AB6AD /* ResultShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C69BB2732A423001AB6AD /* ResultShareViewController.swift */; };
 		CE4C69BE273BDF0C001AB6AD /* 03original animation.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4C69BD273BDF0C001AB6AD /* 03original animation.json */; };
 		CE4C69FE2745046D001AB6AD /* ResultSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C69FD2745046D001AB6AD /* ResultSaveViewController.swift */; };
 		CE98BC9125D3C32000C94160 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98BC9025D3C32000C94160 /* ResultViewController.swift */; };
+		CEAFFFD227B3B7330028A6CE /* branch.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAFFFCB27B3B72D0028A6CE /* branch.json */; };
+		CEAFFFD327B3B7330028A6CE /* big_tree.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAFFFCC27B3B72E0028A6CE /* big_tree.json */; };
+		CEAFFFD427B3B7330028A6CE /* tree.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAFFFCD27B3B72F0028A6CE /* tree.json */; };
+		CEAFFFD527B3B7330028A6CE /* large_branch.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAFFFCE27B3B7300028A6CE /* large_branch.json */; };
+		CEAFFFD627B3B7330028A6CE /* bud.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAFFFCF27B3B7310028A6CE /* bud.json */; };
+		CEAFFFD727B3B7330028A6CE /* tiny_branch.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAFFFD027B3B7310028A6CE /* tiny_branch.json */; };
+		CEAFFFD827B3B7330028A6CE /* large_tree.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAFFFD127B3B7330028A6CE /* large_tree.json */; };
 		CEBBC3C02769FD110013F746 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CEBBC3BF2769FD110013F746 /* Realm */; };
 		CEBBC3C22769FD120013F746 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBBC3C12769FD120013F746 /* RealmSwift */; };
 		CEBBC3C4276A00030013F746 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBC3C3276A00030013F746 /* Memo.swift */; };
@@ -73,14 +76,17 @@
 		CE14666125CAB12B000D89A9 /* OriginalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OriginalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE14666525CAB12B000D89A9 /* OriginalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalUITests.swift; sourceTree = "<group>"; };
 		CE14666725CAB12B000D89A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE236EBD26E8BAB5000CA083 /* original animation 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "original animation 2.json"; sourceTree = "<group>"; };
-		CE42E51F272019460093D4AA /* tree1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tree1.json; path = ../../../Desktop/tree1.json; sourceTree = "<group>"; };
-		CE42E52127201D630093D4AA /* tree3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tree3.json; path = ../../../Desktop/tree3.json; sourceTree = "<group>"; };
-		CE42E52327202AD90093D4AA /* daruma.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = daruma.json; sourceTree = "<group>"; };
 		CE4C69BB2732A423001AB6AD /* ResultShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultShareViewController.swift; sourceTree = "<group>"; };
 		CE4C69BD273BDF0C001AB6AD /* 03original animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "03original animation.json"; sourceTree = "<group>"; };
 		CE4C69FD2745046D001AB6AD /* ResultSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSaveViewController.swift; sourceTree = "<group>"; };
 		CE98BC9025D3C32000C94160 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CEAFFFCB27B3B72D0028A6CE /* branch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = branch.json; sourceTree = "<group>"; };
+		CEAFFFCC27B3B72E0028A6CE /* big_tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = big_tree.json; sourceTree = "<group>"; };
+		CEAFFFCD27B3B72F0028A6CE /* tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tree.json; sourceTree = "<group>"; };
+		CEAFFFCE27B3B7300028A6CE /* large_branch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = large_branch.json; sourceTree = "<group>"; };
+		CEAFFFCF27B3B7310028A6CE /* bud.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bud.json; sourceTree = "<group>"; };
+		CEAFFFD027B3B7310028A6CE /* tiny_branch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tiny_branch.json; sourceTree = "<group>"; };
+		CEAFFFD127B3B7330028A6CE /* large_tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = large_tree.json; sourceTree = "<group>"; };
 		CEBBC3C3276A00030013F746 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		CEBBC44D2798236B0013F746 /* ResultRealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRealmViewController.swift; sourceTree = "<group>"; };
 		DCB27FCE8245A65AF228BAEA /* Pods_OriginalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OriginalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,10 +172,13 @@
 			isa = PBXGroup;
 			children = (
 				CE4C69BD273BDF0C001AB6AD /* 03original animation.json */,
-				CE42E52327202AD90093D4AA /* daruma.json */,
-				CE42E51F272019460093D4AA /* tree1.json */,
-				CE236EBD26E8BAB5000CA083 /* original animation 2.json */,
-				CE42E52127201D630093D4AA /* tree3.json */,
+				CEAFFFCC27B3B72E0028A6CE /* big_tree.json */,
+				CEAFFFCB27B3B72D0028A6CE /* branch.json */,
+				CEAFFFCF27B3B7310028A6CE /* bud.json */,
+				CEAFFFCE27B3B7300028A6CE /* large_branch.json */,
+				CEAFFFD127B3B7330028A6CE /* large_tree.json */,
+				CEAFFFD027B3B7310028A6CE /* tiny_branch.json */,
+				CEAFFFCD27B3B72F0028A6CE /* tree.json */,
 				CE14664325CAB125000D89A9 /* AppDelegate.swift */,
 				CE14664525CAB126000D89A9 /* SceneDelegate.swift */,
 				CE14664725CAB126000D89A9 /* ViewController.swift */,
@@ -320,15 +329,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAFFFD527B3B7330028A6CE /* large_branch.json in Resources */,
 				CE14665025CAB12A000D89A9 /* LaunchScreen.storyboard in Resources */,
-				CE42E52227201D630093D4AA /* tree3.json in Resources */,
+				CEAFFFD427B3B7330028A6CE /* tree.json in Resources */,
+				CEAFFFD627B3B7330028A6CE /* bud.json in Resources */,
 				CE14664D25CAB12A000D89A9 /* Assets.xcassets in Resources */,
 				CE14664B25CAB126000D89A9 /* Main.storyboard in Resources */,
-				CE42E520272019460093D4AA /* tree1.json in Resources */,
-				CE236EBE26E8BAB6000CA083 /* original animation 2.json in Resources */,
 				5DC27FB826E5F56A00D6A230 /* 75406-looped-404-error-animation.json in Resources */,
-				CE42E52427202AD90093D4AA /* daruma.json in Resources */,
+				CEAFFFD727B3B7330028A6CE /* tiny_branch.json in Resources */,
 				CE4C69BE273BDF0C001AB6AD /* 03original animation.json in Resources */,
+				CEAFFFD827B3B7330028A6CE /* large_tree.json in Resources */,
+				CEAFFFD227B3B7330028A6CE /* branch.json in Resources */,
+				CEAFFFD327B3B7330028A6CE /* big_tree.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

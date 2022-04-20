@@ -57,11 +57,12 @@ class ResultViewController: UIViewController {
     //タイマーのカウントのメソッド
     @objc func up() {
         timeCount = timeCount + 1
-
+        
         let hours = timeCount / 3600
         let minutes = (timeCount % 3600) / 60
         let seconds = timeCount % 60
         countLabel.text = String(format: "%02d:%02d:%02d%", hours, minutes, seconds)
+        
         changeImage()
     }
     
@@ -87,14 +88,23 @@ class ResultViewController: UIViewController {
         //アニメーションファイルの指定
         animationView = AnimationView(name: "03original animation") //ここに先ほどダウンロードしたファイル名を記述（拡張子は必要なし）
 
-        if timeCount == 10 {
-            animationView = AnimationView(name: "75406-looped-404-error-animation")
-        }else if timeCount == 15 {
-            animationView = AnimationView(name: "tree3")
-        }else if timeCount == 20 {
-            animationView = AnimationView(name: "tree4")
+        if timeCount >= 5 {
+            animationView = AnimationView(name: "tiny_branch")
+        }else if timeCount <= 10 && timeCount > 5 {
+            animationView = AnimationView(name: "tree")
+        }else if timeCount <= 15 && timeCount > 10 {
+            animationView = AnimationView(name: "large_tree")
+        }else if timeCount <= 20 && timeCount > 15 {
+            animationView = AnimationView(name: "large_branch")
+        }else if timeCount <= 25 && timeCount > 20 {
+            animationView = AnimationView(name: "bud")
+        }else if timeCount <= 30 && timeCount > 25 {
+            animationView = AnimationView(name: "branch")
+        }else if timeCount <= 35 && timeCount > 30 {
+            animationView = AnimationView(name: "big_tree")
         }
     
+//     tiny_branch 2
         
         //アニメーションの位置指定（画面中央）
         animationView.frame = CGRect(x: 50, y: 160, width: view.frame.size.width/1.5, height: view.frame.size.height/2)
@@ -102,7 +112,7 @@ class ResultViewController: UIViewController {
         //アニメーションのアスペクト比を指定＆ループで開始
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
-//        animationView.play()
+        animationView.play()
 
         //ViewControllerに配置
         view.addSubview(animationView)

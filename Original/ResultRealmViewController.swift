@@ -64,7 +64,7 @@ class ResultRealmViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let memoData = realm.objects(Memo.self)
-        cell.textLabel!.text = "\(memoData[indexPath.row].mokuhyou ?? "nil")さん"
+        cell.textLabel!.text = "\(memoData[indexPath.row].name)さん"
         cell.detailTextLabel!.text = String("\(memoData[indexPath.row].age)歳")
         return cell
     }
