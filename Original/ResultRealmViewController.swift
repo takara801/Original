@@ -22,11 +22,14 @@ class ResultRealmViewController: UIViewController, UITableViewDelegate, UITableV
     var mokuhyou: String!
     
     
-    @IBOutlet weak var textField1: UITextField!
-    @IBOutlet weak var textField2: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     let realm = try! Realm()
+    
+    @IBAction func back() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,23 +41,7 @@ class ResultRealmViewController: UIViewController, UITableViewDelegate, UITableV
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func addButtonAction(_ sender: Any){
-        let memo = Memo()
-        memo.name = textField1.text!
-        memo.age = Int(textField2.text!)!
-        try! realm.write {
-            realm.add(memo)
-        }
-        
-        textField1.text = ""
-        textField2.text = ""
-        tableView.reloadData()
-        
-    }
     
-//    @IBAction func back() {
-    //        self.
-    //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let memoData = realm.objects(Memo.self)
@@ -64,8 +51,8 @@ class ResultRealmViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let memoData = realm.objects(Memo.self)
-        cell.textLabel!.text = "\(memoData[indexPath.row].name)さん"
-        cell.detailTextLabel!.text = String("\(memoData[indexPath.row].age)歳")
+        cell.textLabel!.text = "\(memoData[indexPath.row].hizuke)"
+        cell.detailTextLabel!.text = String("\(memoData[indexPath.row].time)")
         return cell
     }
     

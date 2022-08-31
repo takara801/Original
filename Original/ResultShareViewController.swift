@@ -21,6 +21,9 @@ class ResultShareViewController: UIViewController {
     @IBOutlet var time: UILabel!
     @IBOutlet var mokuhyouLabel: UILabel!
     
+    @IBAction func save (){
+        performSegue(withIdentifier: "toSave", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

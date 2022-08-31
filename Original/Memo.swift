@@ -9,12 +9,9 @@ import Foundation
 import RealmSwift
 
 class Memo: Object {
-    @objc dynamic var mokuhyou: String = ""
     @objc dynamic var hizuke: String = ""
-    @objc dynamic var label: String = ""
     @objc dynamic var time: String = ""
     @objc dynamic var content: String = ""
-    @objc dynamic var memo: String = ""
     
     @objc dynamic var name = ""
     @objc dynamic var age = 0
