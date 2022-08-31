@@ -60,10 +60,13 @@ class DrawView: UIView {
 
     override func draw(_ rect: CGRect) {
 
+        let width = UIBezierPath(ovalIn: CGRect(x:((self.view.bounds.width-320)/2),y:(self.view.bounds.height-50),width:320,height:50)
+                                 
+        let hight = width * 16 / 9
         // ここにUIBezierPathを記述する
 
-        // 楕円
-        let oval = UIBezierPath(ovalIn: CGRect(x:((self.view.bounds.width-320)/2),y:(self.view.bounds.height-50),width:320,height:50)
+//        // 楕円
+//        let oval = UIBezierPath(ovalIn: CGRect(x:((self.view.bounds.width-320)/2),y:(self.view.bounds.height-50),width:320,height:50)
         // 内側の色
         UIColor(red: 0, green: 0.933, blue: 1, alpha: 0.545).setFill()
         // 内側を塗りつぶす
@@ -74,6 +77,7 @@ class DrawView: UIView {
         oval.lineWidth = 2.0
         // 線を塗りつぶす
         oval.stroke()
+                                
 
     }
 
