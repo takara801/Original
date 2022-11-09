@@ -14,8 +14,8 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue , sender: Any?) {
        
         if segue.identifier == "toSave" {
-            let resultShareViewController:ResultShareViewController = segue.destination as! ResultShareViewController; resultShareViewController.timeCount = Int(self.timeCount)
-                resultShareViewController.mokuhyou = self.mokuhyou
+            let resultSaveViewController:ResultSaveViewController = segue.destination as! ResultSaveViewController; resultSaveViewController.timeCount = Int(self.timeCount)
+                resultSaveViewController.mokuhyou = self.mokuhyou
             }
     }
     
