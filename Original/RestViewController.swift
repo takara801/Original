@@ -14,7 +14,7 @@ class RestViewController: UIViewController {
     var timer: Timer = Timer()
     
     @IBAction func back(){
-        
+        navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
 
     @objc func down() {

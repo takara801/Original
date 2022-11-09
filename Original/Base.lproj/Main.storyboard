@@ -147,7 +147,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCl-w7-yUK">
                                         <rect key="frame" x="0.0" y="0.0" width="81" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="開始"/>
+                                        <state key="normal" title="開始">
+                                            <color key="titleColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="start" destination="BGi-kw-HM6" eventType="touchUpInside" id="OBF-hh-KrX"/>
                                         </connections>
@@ -155,7 +157,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q28-CA-Rqz">
                                         <rect key="frame" x="99" y="0.0" width="81" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="休憩"/>
+                                        <state key="normal" title="休憩">
+                                            <color key="titleColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="pause" destination="BGi-kw-HM6" eventType="touchUpInside" id="PIf-1d-Wc2"/>
                                             <segue destination="Hik-sc-GYg" kind="show" id="v0z-91-hv8"/>
@@ -164,7 +168,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FE-UD-Est">
                                         <rect key="frame" x="198" y="0.0" width="81" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="終了"/>
+                                        <state key="normal" title="終了">
+                                            <color key="titleColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="fin" destination="BGi-kw-HM6" eventType="touchUpInside" id="1C4-GT-h67"/>
                                             <segue destination="uTO-lz-7QM" kind="presentation" identifier="toSave" id="1Po-Hn-HCp"/>
@@ -179,7 +185,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjI-TF-olI">
                                 <rect key="frame" x="100" y="133" width="214" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTe-X7-wE2">
@@ -238,7 +244,7 @@
                                 <rect key="frame" x="160" y="684" width="96" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="勉強の戻る"/>
+                                <buttonConfiguration key="configuration" style="plain" title="勉強に戻る"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Asx-Zh-oHM"/>
@@ -264,24 +270,28 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="今日の時間を記録しますか？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlJ-fD-Vep">
                                 <rect key="frame" x="33" y="106" width="349" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiY-nm-zeM">
                                 <rect key="frame" x="267" y="780" width="82" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="記録する"/>
+                                <state key="normal" title="記録する">
+                                    <color key="titleColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="addButtonAction:" destination="uTO-lz-7QM" eventType="touchUpInside" id="PmM-Yh-woz"/>
-                                    <action selector="backToTop" destination="uTO-lz-7QM" eventType="touchUpInside" id="DVE-8C-FAE"/>
+                                    <action selector="backToTop" destination="uTO-lz-7QM" eventType="touchUpInside" id="EZf-Mz-vDs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18X-ZU-88d">
                                 <rect key="frame" x="65" y="780" width="143" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="記録を破棄する"/>
+                                <state key="normal" title="記録を破棄する">
+                                    <color key="titleColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="backToTop" destination="uTO-lz-7QM" eventType="touchUpInside" id="y8k-n9-qGx"/>
+                                    <action selector="backToTop" destination="uTO-lz-7QM" eventType="touchUpInside" id="DxS-hr-3fm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiH-FR-EKD">
@@ -291,50 +301,50 @@
                                     <constraint firstAttribute="height" constant="24" id="U7f-rQ-OnV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="mokuhyou" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xE-YY-pQC">
                                 <rect key="frame" x="124" y="202" width="270" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hizuke" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPr-vS-i79">
                                 <rect key="frame" x="125" y="302" width="57" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-MP-UMH">
                                 <rect key="frame" x="52" y="302" width="41" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tec-AX-IoD">
                                 <rect key="frame" x="52" y="353" width="41" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="目標" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jih-DF-Wgc">
-                                <rect key="frame" x="52" y="206" width="41" height="24"/>
+                                <rect key="frame" x="52" y="205" width="41" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k54-YA-waN">
-                                <rect key="frame" x="124" y="244" width="97" height="34"/>
+                                <rect key="frame" x="124" y="246" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="科目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rQ-mc-iZR">
-                                <rect key="frame" x="52" y="249" width="92" height="24"/>
+                                <rect key="frame" x="52" y="252" width="41" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -350,8 +360,8 @@
                             <constraint firstItem="myW-JG-Ac4" firstAttribute="trailing" secondItem="dlJ-fD-Vep" secondAttribute="trailing" constant="32" id="NaF-Dj-r5w"/>
                             <constraint firstItem="Tec-AX-IoD" firstAttribute="top" secondItem="eCh-MP-UMH" secondAttribute="bottom" constant="27" id="RxK-8y-YqY"/>
                             <constraint firstItem="eCh-MP-UMH" firstAttribute="leading" secondItem="myW-JG-Ac4" secondAttribute="leading" constant="56" id="S4U-lf-o7O"/>
+                            <constraint firstItem="4rQ-mc-iZR" firstAttribute="leading" secondItem="myW-JG-Ac4" secondAttribute="leading" constant="56" id="UkJ-R7-Bso"/>
                             <constraint firstItem="Jih-DF-Wgc" firstAttribute="leading" secondItem="myW-JG-Ac4" secondAttribute="leading" constant="56" id="Vth-kx-XVF"/>
-                            <constraint firstItem="4rQ-mc-iZR" firstAttribute="leading" secondItem="myW-JG-Ac4" secondAttribute="leading" constant="-4" id="WIF-d2-PYz"/>
                             <constraint firstItem="myW-JG-Ac4" firstAttribute="trailing" secondItem="BiY-nm-zeM" secondAttribute="trailing" constant="65" id="ZRg-j3-nVZ"/>
                             <constraint firstItem="Jih-DF-Wgc" firstAttribute="top" secondItem="dlJ-fD-Vep" secondAttribute="bottom" constant="51.5" id="jxy-rj-eTV"/>
                             <constraint firstItem="dlJ-fD-Vep" firstAttribute="top" secondItem="myW-JG-Ac4" secondAttribute="top" constant="111" id="mhd-AD-aTO"/>
@@ -372,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixg-Ua-bzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2526" y="64"/>
+            <point key="canvasLocation" x="2524.6376811594205" y="63.616071428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="InL-4q-B0Z">

@@ -32,7 +32,7 @@ class ResultSaveViewController: UIViewController {
     @IBAction func addButtonAction(_ sender: Any){
         let memo = Memo()
         memo.time = time.text!
-//        memo.hizuke = hizukeLabel.text!
+        memo.hizuke = hizukeLabel.text!
 //        memo.content = contentTextView.text!
         try! realm.write {
             realm.add(memo)
@@ -91,7 +91,7 @@ class ResultSaveViewController: UIViewController {
         }
     } else {
         let newMemo = Memo()
-        newMemo.hizuke = hizuke
+//        newMemo.hizuke = hizuke
 //        newMemo.content = content
         
         try! realm.write {
