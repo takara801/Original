@@ -9,22 +9,71 @@ import UIKit
 import Lottie //Lottieのインポート
 
 class ResultViewController: UIViewController,UITextFieldDelegate {
+
     
     override func prepare(for segue: UIStoryboardSegue , sender: Any?) {
-        let resultShareViewController:ResultShareViewController = segue.destination as! ResultShareViewController; resultShareViewController.timeCount = Int(self.timeCount)
-            mokuhyou = mokuhyouTextField.text 
-            resultShareViewController.mokuhyou = self.mokuhyou
+       
+        if segue.identifier == "toSave" {
+            let resultShareViewController:ResultShareViewController = segue.destination as! ResultShareViewController; resultShareViewController.timeCount = Int(self.timeCount)
+                resultShareViewController.mokuhyou = self.mokuhyou
+            }
     }
     
-    
-    @IBOutlet var mokuhyouTextField: UITextField!
+        
+    @IBOutlet var mokuhyouLabel: UILabel!
     @IBOutlet var countLabel: UILabel!
 //    @IBOutlet var treeImageView: UIImageView!
     
     @IBAction func fin (){
-        performSegue(withIdentifier: "toShare", sender: nil)
+//        performSegue(withIdentifier: "toShare", sender: nil)
+        //alertを出す
+        let alert: UIAlertController = UIAlertController(title: "お疲れ様でした！", message: "成果をSNSで発信しますか？", preferredStyle: .alert)
+        
+        //OKボタン
+        alert.addAction(
+            UIAlertAction(
+                title: "はい",
+                style: .default,
+                handler: {action in
+                    //ボタンが押された時の動作
+//                    self.performSegue(withIdentifier: "toShare", sender: nil)
+                    
+                    // スクリーンショットを取得
+                    let shareImage = self.getScreenShot().pngData()
+                    // 共有項目
+                    let activityItems: [Any] = [shareImage!, "今日の成果！"]
+                    // 初期化処理
+                    let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+
+                    // iPad用処理
+                    if UIDevice.current.userInterfaceIdiom == .pad {
+                        activityVC.popoverPresentationController?.sourceView = self.view
+                        activityVC.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0)
+                    }
+
+                    // UIActivityViewControllerを表示
+                    self.present(activityVC, animated: true, completion: nil)
+                }
+            )
+        )
+        
+        //キャンセルボタン
+        alert.addAction(
+            UIAlertAction(
+                title: "いいえ",
+                style: .cancel,
+                handler: {action in
+//                    ボタンが押された時の動作
+                    self.performSegue(withIdentifier: "toSave", sender: nil)
+                }
+            )
+        )
+        
+    present(alert,animated: true,completion: nil)
+
     }
         
+ 
     var mokuhyou: String!
     var timeCount: Int = 0
     var timer: Timer = Timer()
@@ -32,25 +81,44 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
     var animationView = AnimationView()
     
     
+    func getScreenShot()-> UIImage {
+        // キャプチャ範囲を決定
+        let width = Int(UIScreen.main.bounds.size.width)  //画面横幅いっぱい
+        let height = 100
+        let size = CGSize(width: width, height: height)
+        // ビットマップ画像のcontextを作成
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        // 対象のview内の描画をcontextに複写する.
+        self.view.layer.render(in: context)
+        // 現在のcontextのビットマップをUIImageとして取得.
+        let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        // contextを閉じる.
+        UIGraphicsEndImageContext()
+        return capturedImage
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        mokuhyouTextField.placeholder = "目標を入力 "
+//         Do any additional setup after loading the view.
+//        mokuhyouTextField.placeholder = "目標を入力 "
+//
+        mokuhyouLabel.text = mokuhyou
+        
         //アニメーションの呼び出し
         addAnimationView()
-        mokuhyouTextField.delegate = self
+       
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+//        view.endEditing(true)
+//    }
+//
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
+
+   
     
     //タイマーを開始するメソッド
     @IBAction func start () {

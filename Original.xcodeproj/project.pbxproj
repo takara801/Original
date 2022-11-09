@@ -35,6 +35,7 @@
 		CEBBC3C22769FD120013F746 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBBC3C12769FD120013F746 /* RealmSwift */; };
 		CEBBC3C4276A00030013F746 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBC3C3276A00030013F746 /* Memo.swift */; };
 		CEBBC44E2798236B0013F746 /* ResultRealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBC44D2798236B0013F746 /* ResultRealmViewController.swift */; };
+		CEE6AC5D290939E300609A4E /* RestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE6AC5C290939E200609A4E /* RestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		CEAFFFD127B3B7330028A6CE /* large_tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = large_tree.json; sourceTree = "<group>"; };
 		CEBBC3C3276A00030013F746 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		CEBBC44D2798236B0013F746 /* ResultRealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRealmViewController.swift; sourceTree = "<group>"; };
+		CEE6AC5C290939E200609A4E /* RestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestViewController.swift; sourceTree = "<group>"; };
 		DCB27FCE8245A65AF228BAEA /* Pods_OriginalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OriginalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53BB9E9FA14AA28928414B0 /* Pods-OriginalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OriginalTests.debug.xcconfig"; path = "Target Support Files/Pods-OriginalTests/Pods-OriginalTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 				CE98BC9025D3C32000C94160 /* ResultViewController.swift */,
 				CE4C69BB2732A423001AB6AD /* ResultShareViewController.swift */,
 				CE4C69FD2745046D001AB6AD /* ResultSaveViewController.swift */,
+				CEE6AC5C290939E200609A4E /* RestViewController.swift */,
 				CEBBC3C3276A00030013F746 /* Memo.swift */,
 				CE06B85B2875945A0013921D /* DateExtension.swift */,
 				CEBBC44D2798236B0013F746 /* ResultRealmViewController.swift */,
@@ -473,6 +476,7 @@
 			files = (
 				CEBBC3C4276A00030013F746 /* Memo.swift in Sources */,
 				CE14664825CAB126000D89A9 /* ViewController.swift in Sources */,
+				CEE6AC5D290939E300609A4E /* RestViewController.swift in Sources */,
 				CE14664425CAB125000D89A9 /* AppDelegate.swift in Sources */,
 				CE14664625CAB126000D89A9 /* SceneDelegate.swift in Sources */,
 				CE06B85C2875945A0013921D /* DateExtension.swift in Sources */,

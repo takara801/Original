@@ -13,15 +13,16 @@ class ResultSaveViewController: UIViewController {
     let realm  = try! Realm()
     
     var timeCount: Int!
-    
     var mokuhyou: String!
+    var date: String!
     
+    @IBOutlet var kamokuTextField: UITextField!
     @IBOutlet var time: UILabel!
     @IBOutlet var mokuhyouLabel: UILabel!
     @IBOutlet var hizukeLabel:UILabel!
-    @IBOutlet var contentTextView:UITextView!
+//    @IBOutlet var contentTextView:UITextView!
     @IBOutlet var jikann: UILabel!
-    @IBOutlet var memo: UILabel!
+//    @IBOutlet var memo: UILabel!
     
     @IBAction func backToTop() {
         navigationController?.popToRootViewController(animated: true)
@@ -32,7 +33,7 @@ class ResultSaveViewController: UIViewController {
         let memo = Memo()
         memo.time = time.text!
 //        memo.hizuke = hizukeLabel.text!
-        memo.content = contentTextView.text!
+//        memo.content = contentTextView.text!
         try! realm.write {
             realm.add(memo)
         }
@@ -45,20 +46,18 @@ class ResultSaveViewController: UIViewController {
         
         let memo: Memo? = read()
         
-        
        
         hizukeLabel.text = Date().hizukeFormat
         time.text = memo?.time
 //        jikann.text = memo?.jikann
-        contentTextView.text = memo?.content
+//        contentTextView.text = memo?.content
         
-        
-        
-        let hours = timeCount / 3600
-        let minutes = (timeCount % 3600) / 60
+    
+        let minutes = timeCount / 60
         let seconds = timeCount % 60
+
         
-        time.text = String(format: "%02d:%02d:%02d%", hours, minutes, seconds)
+        time.text = String(format: "%02d:%02d", minutes, seconds)
         mokuhyouLabel.text = mokuhyou
     }
     
@@ -67,27 +66,33 @@ class ResultSaveViewController: UIViewController {
     }
     
     @IBAction func save() {
-//        let mokuhyou: String = mokuhyou
-        let hizuke: String = hizukeLabel.text!
-        let label: String = time.text!
-        let content: String = contentTextView.text!
         
+        let formatter = DateFormatter()
+            formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "MM/dd", options: 0, locale: Locale(identifier: "ja_JP"))
+            print(formatter.string(from: Date()))
+        
+//        let mokuhyou: String = mokuhyou
+        let hizuke: String = formatter.string(from: Date())
+        let label: String = time.text!
+//        let content: String = contentTextView.text!
 //        ?        contentTextView.text = ""
         
     
     let memo: Memo? = read()
+        
+   
     
     if memo != nil {
         try! realm.write {
            
             memo!.hizuke = hizuke
             memo!.time = label
-            memo!.content = content
+//            memo!.content = content
         }
     } else {
         let newMemo = Memo()
         newMemo.hizuke = hizuke
-        newMemo.content = content
+//        newMemo.content = content
         
         try! realm.write {
             realm.add(newMemo)

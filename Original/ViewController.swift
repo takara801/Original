@@ -7,31 +7,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet var mokuhyouTextField: UITextField!
+
+    var mokuhyou: String!
+
+    override func prepare(for segue: UIStoryboardSegue , sender: Any?) {
+        if segue.identifier == "toView" {
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController; resultViewController.mokuhyou = self.mokuhyouTextField.text
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-//        let oval = UIBezierPath(ovalIn: CGRect(x: 100, y: 200, width: 300, height: 200))
-//        // 内側の色
-//        UIColor(red: 0, green: 0.5, blue: 1, alpha: 0.3).setFill()
-//        // 内側を塗りつぶす
-//        oval.fill()
-//        // 線の色
-//        UIColor(red: 0, green: 0.5, blue: 1, alpha: 1.0).setStroke()
-//        // 線の太さ
-//        oval.lineWidth = 2.0
-//        // 線を塗りつぶす
-//        oval.stroke()
-//        self.view.addSubview(oval)
         
-        let rect5 = UIView()
-               rect5.frame = CGRect(x:((self.view.bounds.width-320)/2),y:(self.view.bounds.height-50),width:320,height:50)
-               rect5.backgroundColor = UIColor.blue
-               self.view.addSubview(rect5)
+        mokuhyouTextField.placeholder = "目標を入力 "
         
-        let drawView = DrawView(frame: self.view.bounds)
-        self.view.addSubview(drawView)
+//        インスタンス化
+       let ovalView = DrawView(frame: self.view.bounds)
+        
+        ovalView.viewX = self.view.bounds.maxX
+        ovalView.viewY = self.view.bounds.maxY
+//        楕円があるviewを画面上に表示
+        self.view.addSubview(ovalView)
+//        楕円があるviewを一番下に
+        self.view.sendSubviewToBack(ovalView)
         
     }
 
@@ -48,36 +49,26 @@ class ViewController: UIViewController {
 
 
 class DrawView: UIView {
+        var viewX:CGFloat = 390.0
+        var viewY:CGFloat = 870.0
 
-    override init(frame: CGRect) {
-        super.init(frame: frame);
-        self.backgroundColor = UIColor.clear;
+        override init(frame: CGRect){
+            super.init(frame: frame);
+            self.backgroundColor = UIColor.clear;
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func draw(_ rect: CGRect) {
+        let ovalWidth = viewX * 2
+        let ovalHight = viewX * 4 / 3
 
-        let width = UIBezierPath(ovalIn: CGRect(x:((self.view.bounds.width-320)/2),y:(self.view.bounds.height-50),width:320,height:50)
-                                 
-        let hight = width * 16 / 9
-        // ここにUIBezierPathを記述する
-
-//        // 楕円
-//        let oval = UIBezierPath(ovalIn: CGRect(x:((self.view.bounds.width-320)/2),y:(self.view.bounds.height-50),width:320,height:50)
-        // 内側の色
-        UIColor(red: 0, green: 0.933, blue: 1, alpha: 0.545).setFill()
-        // 内側を塗りつぶす
+        let oval = UIBezierPath(ovalIn:CGRect(x: -viewX/2, y:viewY-(ovalHight/2), width: ovalWidth, height: ovalHight))
+        
+        UIColor(red: 1,green:0.933 ,blue:0.545 ,alpha:1).setFill()
         oval.fill()
-        // 線の色
-        UIColor(red: 0, green: 0.5, blue: 1, alpha: 1.0).setStroke()
-        // 線の太さ
-        oval.lineWidth = 2.0
-        // 線を塗りつぶす
-        oval.stroke()
-                                
 
     }
 
