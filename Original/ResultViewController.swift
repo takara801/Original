@@ -99,9 +99,7 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-//         Do any additional setup after loading the view.
-//        mokuhyouTextField.placeholder = "目標を入力 "
-//
+
         mokuhyouLabel.text = mokuhyou
         
         //アニメーションの呼び出し

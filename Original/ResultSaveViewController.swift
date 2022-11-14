@@ -44,20 +44,24 @@ class ResultSaveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.hidesBackButton = true
+        
         let memo: Memo? = read()
         
-       
+        let memoData = realm.objects(Memo.self)
+        print("🟥全てのデータ\(memoData)")
+
+        
         hizukeLabel.text = Date().hizukeFormat
         time.text = memo?.time
 //        jikann.text = memo?.jikann
 //        contentTextView.text = memo?.content
         
-    
-        let minutes = timeCount / 60
+        let hours = timeCount / 3600
+        let minutes = (timeCount % 3600) / 60
         let seconds = timeCount % 60
-
         
-        time.text = String(format: "%02d:%02d", minutes, seconds)
+        time.text = String(format: "%02d:%02d:%02d%", hours, minutes, seconds)
         mokuhyouLabel.text = mokuhyou
     }
     
@@ -65,7 +69,13 @@ class ResultSaveViewController: UIViewController {
         return realm.objects(Memo.self).first
     }
     
-    @IBAction func save() {
+    @IBAction func save(_ sender: Any) {
+        let memo = Memo()
+        memo.time = time.text!
+        memo.hizuke = hizukeLabel.text!
+        try! realm.write {
+            realm.add(memo)
+        }
         
         let formatter = DateFormatter()
             formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "MM/dd", options: 0, locale: Locale(identifier: "ja_JP"))
@@ -76,23 +86,19 @@ class ResultSaveViewController: UIViewController {
         let label: String = time.text!
 //        let content: String = contentTextView.text!
 //        ?        contentTextView.text = ""
-        
     
-    let memo: Memo? = read()
-        
-   
     
     if memo != nil {
         try! realm.write {
            
-            memo!.hizuke = hizuke
-            memo!.time = label
+            memo.hizuke = hizuke
+            memo.time = label
 //            memo!.content = content
         }
     } else {
         let newMemo = Memo()
-//        newMemo.hizuke = hizuke
-//        newMemo.content = content
+        newMemo.hizuke = hizuke
+        newMemo.time = time.text!
         
         try! realm.write {
             realm.add(newMemo)
