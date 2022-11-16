@@ -17,6 +17,11 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
             let resultSaveViewController:ResultSaveViewController = segue.destination as! ResultSaveViewController; resultSaveViewController.timeCount = Int(self.timeCount)
                 resultSaveViewController.mokuhyou = self.mokuhyou
             }
+        
+        if segue.identifier == "toRest" {
+            let RestViewController:RestViewController = segue.destination as! RestViewController;
+                RestViewController.rest = self.rest
+            }
     }
     
         
@@ -75,6 +80,7 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
         
  
     var mokuhyou: String!
+    var rest: String!
     var timeCount: Int = 0
     var timer: Timer = Timer()
     //AnimationViewの宣言

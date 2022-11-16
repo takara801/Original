@@ -13,11 +13,14 @@ class RestViewController: UIViewController {
     var count: Int = 300
     var timer: Timer = Timer()
     
+    var rest: String!
+    
     @IBAction func back(){
         navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
 
     @objc func down() {
+     
         count = count - 1
         
         let minutes = count / 60
@@ -45,8 +48,9 @@ class RestViewController: UIViewController {
         let seconds = count % 60
         label.text = String(format: "%02d:%02d", minutes, seconds)
         // Do any additional setup after loading the view.
+        
     }
-    
+
 
     /*
     // MARK: - Navigation

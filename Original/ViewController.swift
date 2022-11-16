@@ -10,18 +10,28 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var mokuhyouTextField: UITextField!
-
+    @IBOutlet var rest: UILabel!
     var mokuhyou: String!
 
     override func prepare(for segue: UIStoryboardSegue , sender: Any?) {
         if segue.identifier == "toView" {
-        let resultViewController:ResultViewController = segue.destination as! ResultViewController; resultViewController.mokuhyou = self.mokuhyouTextField.text
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController;
+            resultViewController.mokuhyou = self.mokuhyouTextField.text
         }
     }
+  
+    
+   //データ変更時の呼び出しメソッド
+     @IBAction func changeDate(sender: UIDatePicker) {
+     
+         let formatter = DateFormatter()
+         formatter.dateFormat = "mm分"
+//         rest.text = formatter.stringFromDate(sender.DateFormat)
+
+     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         mokuhyouTextField.placeholder = "目標を入力 "
         
 //        インスタンス化
@@ -41,7 +51,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func go (){
         performSegue(withIdentifier: "toView", sender: nil)
         
-       // go.layer.cornerRadius = 100
     }
     
     

@@ -20,6 +20,7 @@
 		CE14665025CAB12A000D89A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE14664E25CAB12A000D89A9 /* LaunchScreen.storyboard */; };
 		CE14665B25CAB12B000D89A9 /* OriginalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14665A25CAB12B000D89A9 /* OriginalTests.swift */; };
 		CE14666625CAB12B000D89A9 /* OriginalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14666525CAB12B000D89A9 /* OriginalUITests.swift */; };
+		CE3A8A172924EFC600A67D83 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A8A162924EFC600A67D83 /* CalendarViewController.swift */; };
 		CE4C69BC2732A423001AB6AD /* ResultShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C69BB2732A423001AB6AD /* ResultShareViewController.swift */; };
 		CE4C69BE273BDF0C001AB6AD /* 03original animation.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4C69BD273BDF0C001AB6AD /* 03original animation.json */; };
 		CE4C69FE2745046D001AB6AD /* ResultSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C69FD2745046D001AB6AD /* ResultSaveViewController.swift */; };
@@ -36,6 +37,7 @@
 		CEBBC3C4276A00030013F746 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBC3C3276A00030013F746 /* Memo.swift */; };
 		CEBBC44E2798236B0013F746 /* ResultRealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBC44D2798236B0013F746 /* ResultRealmViewController.swift */; };
 		CEE6AC5D290939E300609A4E /* RestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE6AC5C290939E200609A4E /* RestViewController.swift */; };
+		CEE6AC602924EC9500609A4E /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = CEE6AC5F2924EC9500609A4E /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,7 @@
 		CE14666125CAB12B000D89A9 /* OriginalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OriginalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE14666525CAB12B000D89A9 /* OriginalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalUITests.swift; sourceTree = "<group>"; };
 		CE14666725CAB12B000D89A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3A8A162924EFC600A67D83 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		CE4C69BB2732A423001AB6AD /* ResultShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultShareViewController.swift; sourceTree = "<group>"; };
 		CE4C69BD273BDF0C001AB6AD /* 03original animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "03original animation.json"; sourceTree = "<group>"; };
 		CE4C69FD2745046D001AB6AD /* ResultSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSaveViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBBC3C22769FD120013F746 /* RealmSwift in Frameworks */,
+				CEE6AC602924EC9500609A4E /* FSCalendar in Frameworks */,
 				CEBBC3C02769FD110013F746 /* Realm in Frameworks */,
 				95D9D7EC42BCB1E1B18A5741 /* Pods_Original.framework in Frameworks */,
 			);
@@ -198,6 +202,7 @@
 				CEBBC3C3276A00030013F746 /* Memo.swift */,
 				CE06B85B2875945A0013921D /* DateExtension.swift */,
 				CEBBC44D2798236B0013F746 /* ResultRealmViewController.swift */,
+				CE3A8A162924EFC600A67D83 /* CalendarViewController.swift */,
 			);
 			path = Original;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			packageProductDependencies = (
 				CEBBC3BF2769FD110013F746 /* Realm */,
 				CEBBC3C12769FD120013F746 /* RealmSwift */,
+				CEE6AC5F2924EC9500609A4E /* FSCalendar */,
 			);
 			productName = Original;
 			productReference = CE14664025CAB125000D89A9 /* Original.app */;
@@ -318,6 +324,7 @@
 			mainGroup = CE14663725CAB125000D89A9;
 			packageReferences = (
 				CEBBC3BE2769FD110013F746 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				CEE6AC5E2924EC9200609A4E /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = CE14664125CAB125000D89A9 /* Products */;
 			projectDirPath = "";
@@ -477,6 +484,7 @@
 				CEBBC3C4276A00030013F746 /* Memo.swift in Sources */,
 				CE14664825CAB126000D89A9 /* ViewController.swift in Sources */,
 				CEE6AC5D290939E300609A4E /* RestViewController.swift in Sources */,
+				CE3A8A172924EFC600A67D83 /* CalendarViewController.swift in Sources */,
 				CE14664425CAB125000D89A9 /* AppDelegate.swift in Sources */,
 				CE14664625CAB126000D89A9 /* SceneDelegate.swift in Sources */,
 				CE06B85C2875945A0013921D /* DateExtension.swift in Sources */,
@@ -826,6 +834,14 @@
 				kind = branch;
 			};
 		};
+		CEE6AC5E2924EC9200609A4E /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -838,6 +854,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEBBC3BE2769FD110013F746 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		CEE6AC5F2924EC9500609A4E /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEE6AC5E2924EC9200609A4E /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
