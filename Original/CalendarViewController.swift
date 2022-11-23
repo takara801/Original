@@ -11,6 +11,7 @@ import RealmSwift
 
 class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
 
+    let realm  = try! Realm()
     @IBOutlet  weak var calendar: FSCalendar!
     
     override func viewDidLoad() {

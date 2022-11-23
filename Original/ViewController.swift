@@ -7,20 +7,40 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate,UIPickerViewDelegate, UIPickerViewDataSource {
+    
     
     @IBOutlet var mokuhyouTextField: UITextField!
-    @IBOutlet var rest: UILabel!
+    @IBOutlet var pickerView: UIPickerView!
     var mokuhyou: String!
+    
+    var restTime: Int = 300
+    let restMinitesList = ["5","10","15","20",]
 
     override func prepare(for segue: UIStoryboardSegue , sender: Any?) {
+        
         if segue.identifier == "toView" {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController;
             resultViewController.mokuhyou = self.mokuhyouTextField.text
+            resultViewController.restTime = self.restTime
         }
     }
   
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return restMinitesList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return restMinitesList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        restTime = Int(restMinitesList[row])! * 60
+    }
    //データ変更時の呼び出しメソッド
      @IBAction func changeDate(sender: UIDatePicker) {
      
@@ -32,6 +52,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerView.delegate = self
+        pickerView.dataSource = self
         mokuhyouTextField.placeholder = "目標を入力 "
         
 //        インスタンス化

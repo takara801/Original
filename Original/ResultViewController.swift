@@ -9,6 +9,8 @@ import UIKit
 import Lottie //Lottieのインポート
 
 class ResultViewController: UIViewController,UITextFieldDelegate {
+    
+    let UD = UserDefaults.standard
 
     
     override func prepare(for segue: UIStoryboardSegue , sender: Any?) {
@@ -20,7 +22,8 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
         
         if segue.identifier == "toRest" {
             let RestViewController:RestViewController = segue.destination as! RestViewController;
-                RestViewController.rest = self.rest
+                RestViewController.count = self.restTime
+
             }
     }
     
@@ -80,7 +83,7 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
         
  
     var mokuhyou: String!
-    var rest: String!
+    var restTime: Int = 300
     var timeCount: Int = 0
     var timer: Timer = Timer()
     //AnimationViewの宣言

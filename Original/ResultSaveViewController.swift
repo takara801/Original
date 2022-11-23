@@ -34,6 +34,7 @@ class ResultSaveViewController: UIViewController {
         memo.time = time.text!
         memo.hizuke = hizukeLabel.text!
 //        memo.content = contentTextView.text!
+        
         try! realm.write {
             realm.add(memo)
         }
