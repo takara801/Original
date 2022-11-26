@@ -36,6 +36,8 @@ class RestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        self.navigationItem.hidesBackButton = true
+        
             if !timer.isValid{
                 timer = Timer.scheduledTimer(timeInterval:1,
                                              target: self,

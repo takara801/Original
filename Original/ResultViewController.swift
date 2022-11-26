@@ -34,6 +34,13 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func fin (){
 //        performSegue(withIdentifier: "toShare", sender: nil)
+        
+        animationView.pause()
+        if timer.isValid {
+                //タイマーが動作していたら停止する
+                timer.invalidate()
+        }
+        
         //alertを出す
         let alert: UIAlertController = UIAlertController(title: "お疲れ様でした！", message: "成果をSNSで発信しますか？", preferredStyle: .alert)
         
@@ -109,6 +116,8 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.hidesBackButton = true
+        
         mokuhyouLabel.text = mokuhyou
         
         //アニメーションの呼び出し
