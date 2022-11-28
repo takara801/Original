@@ -398,9 +398,14 @@
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msV-lS-6Zx" customClass="FSCalendar">
                                 <rect key="frame" x="10" y="184" width="394" height="529"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" red="0.99843293430000002" green="0.9342485666" blue="0.54507911210000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="dataSource" destination="FT5-6u-Een" id="YMA-Lq-ZLG"/>
-                                    <outlet property="delegate" destination="FT5-6u-Een" id="d2T-wS-SSV"/>
+                                    <outlet property="dataSource" destination="FT5-6u-Een" id="2Sg-0x-gLM"/>
+                                    <outlet property="delegate" destination="FT5-6u-Een" id="YyC-Xi-Seu"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -412,7 +417,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dut-ss-DDI"/>
                     <connections>
-                        <outlet property="calendar" destination="msV-lS-6Zx" id="dlT-gQ-SiZ"/>
+                        <outlet property="calendar" destination="msV-lS-6Zx" id="4Ab-he-J44"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sp5-xl-Bng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

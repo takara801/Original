@@ -31,7 +31,7 @@ class ResultSaveViewController: UIViewController {
     
     @IBAction func addButtonAction(_ sender: Any){
         let memo = Memo()
-        memo.time = time.text!
+        memo.time = timeCount
         memo.hizuke = hizukeLabel.text!
 //        memo.content = contentTextView.text!
         
@@ -54,7 +54,7 @@ class ResultSaveViewController: UIViewController {
 
         
         hizukeLabel.text = Date().hizukeFormat
-        time.text = memo?.time
+//        time.text = memo?.time
 //        jikann.text = memo?.jikann
 //        contentTextView.text = memo?.content
         
@@ -72,7 +72,7 @@ class ResultSaveViewController: UIViewController {
     
     @IBAction func save(_ sender: Any) {
         let memo = Memo()
-        memo.time = time.text!
+        memo.time = timeCount
         memo.hizuke = hizukeLabel.text!
         try! realm.write {
             realm.add(memo)
@@ -93,13 +93,14 @@ class ResultSaveViewController: UIViewController {
         try! realm.write {
            
             memo.hizuke = hizuke
-            memo.time = label
+            memo.time = Int(label)!
 //            memo!.content = content
         }
     } else {
         let newMemo = Memo()
         newMemo.hizuke = hizuke
-        newMemo.time = time.text!
+        newMemo.time = Int(label)!
+//        newMemo.time = time.text!
         
         try! realm.write {
             realm.add(newMemo)

@@ -10,7 +10,7 @@ import RealmSwift
 
 class Memo: Object {
     @objc dynamic var hizuke: String = ""
-    @objc dynamic var time: String = ""
+    @objc dynamic var time: Int = 0
     @objc dynamic var content: String = ""
     
     @objc dynamic var name = ""

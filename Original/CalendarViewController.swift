@@ -9,7 +9,14 @@ import UIKit
 import FSCalendar
 import RealmSwift
 
-class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
+class CalendarViewController: UIViewController, FSCalendarDataSource ,FSCalendarDelegate {
+    
+    func stringForDate(date: Date, format: String) -> String{
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = format
+        return formatter.string(from: date)
+    }
 
     let realm  = try! Realm()
     @IBOutlet  weak var calendar: FSCalendar!
@@ -17,6 +24,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
 //        let userData = realm.objects(Memo.self)
 //        print("🟥全てのデータ\(userData)")
         
@@ -27,7 +35,35 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
            calendar.appearance.calendar.firstWeekday = 1 // 月曜日からに変更
     }
     
-
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
+        let date = stringForDate(date: date, format: "yyyy/MM/dd")
+        let memoDates = realm.objects(Memo.self)
+        var studyDays = [String:Int]()
+        for study in memoDates{
+            if studyDays[study.hizuke] == nil{
+                studyDays[study.hizuke] = study.time
+            }else{
+                let newValue = studyDays[study.hizuke]! + study.time
+                studyDays.updateValue(newValue, forKey: study.hizuke)
+            }
+        }
+        
+        if studyDays[date] != nil{
+            if studyDays[date]! > 10{
+                return UIColor.green//2時間以上
+            }else if studyDays[date]! > 5{
+                return UIColor.red//1時間以上
+            }else if studyDays[date]! > 2{
+                return UIColor.blue//1時間以上
+            }else{
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 

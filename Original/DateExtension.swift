@@ -11,7 +11,7 @@ extension Date{
     var hizukeFormat: String{
         let date:Date = Date()
         let format = DateFormatter()
-        format.dateFormat = "MM/dd"
+        format.dateFormat = "yyyyy/MM/dd"
         
         let sDate = format.string(from:date)
         print(sDate)
