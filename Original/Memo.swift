@@ -13,8 +13,8 @@ class Memo: Object {
     @objc dynamic var time: Int = 0
     @objc dynamic var content: String = ""
     
-    @objc dynamic var name = ""
-    @objc dynamic var age = 0
+//    @objc dynamic var name = ""
+//    @objc dynamic var age = 0
     
 }
 

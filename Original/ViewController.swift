@@ -52,6 +52,10 @@ class ViewController: UIViewController, UITextFieldDelegate,UIPickerViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.backButtonTitle = "戻る"
+        self.navigationController!.navigationBar.tintColor = UIColor(red: 0.247, green: 0.247, blue: 0.247, alpha: 1.0)
+        
         pickerView.delegate = self
         pickerView.dataSource = self
         mokuhyouTextField.placeholder = "目標を入力 "

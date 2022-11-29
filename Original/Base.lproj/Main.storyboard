@@ -412,7 +412,9 @@
                         <viewLayoutGuide key="safeArea" id="Uot-yG-riY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="msV-lS-6Zx" firstAttribute="centerX" secondItem="uxP-Ct-csm" secondAttribute="centerX" id="4NN-xe-Ezf"/>
+                            <constraint firstItem="msV-lS-6Zx" firstAttribute="top" secondItem="uxP-Ct-csm" secondAttribute="top" constant="184" id="EX3-vL-7HO"/>
+                            <constraint firstItem="msV-lS-6Zx" firstAttribute="leading" secondItem="Uot-yG-riY" secondAttribute="leading" constant="10" id="Pdu-mx-azd"/>
+                            <constraint firstItem="Uot-yG-riY" firstAttribute="trailing" secondItem="msV-lS-6Zx" secondAttribute="trailing" constant="10" id="pIA-I9-Gjr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dut-ss-DDI"/>

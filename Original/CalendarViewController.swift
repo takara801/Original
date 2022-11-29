@@ -9,9 +9,9 @@ import UIKit
 import FSCalendar
 import RealmSwift
 
-class CalendarViewController: UIViewController, FSCalendarDataSource ,FSCalendarDelegate {
+class CalendarViewController: UIViewController, FSCalendarDataSource ,FSCalendarDelegate ,FSCalendarDelegateAppearance {
     
-    func stringForDate(date: Date, format: String) -> String{
+    func stringFromDate(date: Date, format: String) -> String{
         let formatter: DateFormatter = DateFormatter()
         formatter.calendar = Calendar(identifier: .gregorian)
         formatter.dateFormat = format
@@ -28,7 +28,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource ,FSCalendar
 //        let userData = realm.objects(Memo.self)
 //        print("🟥全てのデータ\(userData)")
         
-        let calendar = FSCalendar(frame: CGRect(x: 50, y: 200, width: 320, height: 300))
+//        let calendar = FSCalendar(frame: CGRect(x: 50, y: 200, width: 320, height: 300))
            calendar.dataSource = self
            calendar.delegate = self
 //           view.addSubview(calendar)
@@ -36,7 +36,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource ,FSCalendar
     }
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
-        let date = stringForDate(date: date, format: "yyyy/MM/dd")
+        let date = stringFromDate(date: date, format: "yyyy/MM/dd")
         let memoDates = realm.objects(Memo.self)
         var studyDays = [String:Int]()
         for study in memoDates{
