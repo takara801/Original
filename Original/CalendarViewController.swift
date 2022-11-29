@@ -49,12 +49,24 @@ class CalendarViewController: UIViewController, FSCalendarDataSource ,FSCalendar
         }
         
         if studyDays[date] != nil{
-            if studyDays[date]! > 10{
-                return UIColor.green//2時間以上
+            if studyDays[date]! > 8{
+                return UIColor(red: 0.125, green: 0.376, blue: 0.306, alpha: 1.0)//2時間以上
+            }else if studyDays[date]! > 7{
+                return UIColor(red: 0.114, green: 0.455, blue: 0.372, alpha: 1.0)//1時間以上
+            }else if studyDays[date]! > 6{
+                return UIColor(red: 0.047, green: 0.584, blue: 0.478, alpha: 1.0)//1時間以上
             }else if studyDays[date]! > 5{
-                return UIColor.red//1時間以上
+                return UIColor(red: 0.329, green: 0.725, blue: 0.478, alpha: 1.0)//1時間以上
+            }else if studyDays[date]! > 4{
+                return UIColor(red: 0.419, green: 0.792, blue: 0.514, alpha: 1.0)
+            }else if studyDays[date]! > 3{
+                    return UIColor(red: 0.560, green: 0.820, blue: 0.310, alpha: 1.0)
             }else if studyDays[date]! > 2{
-                return UIColor.blue//1時間以上
+                return UIColor(red: 0.808, green: 0.906, blue: 0.255, alpha: 1.0)
+            }else if studyDays[date]! > 1{
+                return UIColor(red: 0.902, green: 0.976, blue: 0.529, alpha: 1.0)
+            }else if studyDays[date]! > 0{
+                return UIColor(red: 0.965, green: 0.941, blue: 0.694, alpha: 1.0)
             }else{
                 return nil
             }

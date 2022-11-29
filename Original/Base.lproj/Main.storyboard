@@ -395,12 +395,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msV-lS-6Zx" customClass="FSCalendar">
-                                <rect key="frame" x="10" y="184" width="394" height="529"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msV-lS-6Zx" customClass="FSCalendar">
+                                <rect key="frame" x="10" y="134" width="394" height="532"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
-                                        <color key="value" red="0.99843293430000002" green="0.9342485666" blue="0.54507911210000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.36304263211764531" green="0.32389097571280118" blue="0.32389097571280118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" red="0.70757865724043567" green="0.55444654165004925" blue="0.51162618056853193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -408,12 +414,22 @@
                                     <outlet property="delegate" destination="FT5-6u-Een" id="YyC-Xi-Seu"/>
                                 </connections>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="無題49-20221129190838" translatesAutoresizingMaskIntoConstraints="NO" id="S1D-09-bCI">
+                                <rect key="frame" x="65" y="621" width="284" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="QyW-Ek-5Wx"/>
+                                    <constraint firstAttribute="height" constant="275" id="cQf-ro-OmZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uot-yG-riY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="msV-lS-6Zx" firstAttribute="top" secondItem="uxP-Ct-csm" secondAttribute="top" constant="184" id="EX3-vL-7HO"/>
+                            <constraint firstItem="msV-lS-6Zx" firstAttribute="top" secondItem="uxP-Ct-csm" secondAttribute="top" constant="134" id="E4b-Gf-KY3"/>
+                            <constraint firstAttribute="bottom" secondItem="S1D-09-bCI" secondAttribute="bottom" id="GXN-rM-ePq"/>
                             <constraint firstItem="msV-lS-6Zx" firstAttribute="leading" secondItem="Uot-yG-riY" secondAttribute="leading" constant="10" id="Pdu-mx-azd"/>
+                            <constraint firstItem="Uot-yG-riY" firstAttribute="bottom" secondItem="msV-lS-6Zx" secondAttribute="bottom" constant="196" id="fpr-0a-LwN"/>
+                            <constraint firstItem="S1D-09-bCI" firstAttribute="centerX" secondItem="uxP-Ct-csm" secondAttribute="centerX" id="iBO-Ah-kF1"/>
                             <constraint firstItem="Uot-yG-riY" firstAttribute="trailing" secondItem="msV-lS-6Zx" secondAttribute="trailing" constant="10" id="pIA-I9-Gjr"/>
                         </constraints>
                     </view>
@@ -602,6 +618,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="無題49-20221129190838" width="2048" height="2048"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

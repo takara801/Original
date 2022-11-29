@@ -24,6 +24,7 @@
 		CE4C69BC2732A423001AB6AD /* ResultShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C69BB2732A423001AB6AD /* ResultShareViewController.swift */; };
 		CE4C69BE273BDF0C001AB6AD /* 03original animation.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4C69BD273BDF0C001AB6AD /* 03original animation.json */; };
 		CE4C69FE2745046D001AB6AD /* ResultSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C69FD2745046D001AB6AD /* ResultSaveViewController.swift */; };
+		CE7A637B293660D20048FF26 /* Clock-Alarm02-mp3.zip in Resources */ = {isa = PBXBuildFile; fileRef = CE7A637A293660D20048FF26 /* Clock-Alarm02-mp3.zip */; };
 		CE98BC9125D3C32000C94160 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98BC9025D3C32000C94160 /* ResultViewController.swift */; };
 		CEAFFFD227B3B7330028A6CE /* branch.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAFFFCB27B3B72D0028A6CE /* branch.json */; };
 		CEAFFFD327B3B7330028A6CE /* big_tree.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAFFFCC27B3B72E0028A6CE /* big_tree.json */; };
@@ -85,6 +86,7 @@
 		CE4C69BB2732A423001AB6AD /* ResultShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultShareViewController.swift; sourceTree = "<group>"; };
 		CE4C69BD273BDF0C001AB6AD /* 03original animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "03original animation.json"; sourceTree = "<group>"; };
 		CE4C69FD2745046D001AB6AD /* ResultSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSaveViewController.swift; sourceTree = "<group>"; };
+		CE7A637A293660D20048FF26 /* Clock-Alarm02-mp3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "Clock-Alarm02-mp3.zip"; sourceTree = "<group>"; };
 		CE98BC9025D3C32000C94160 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CEAFFFCB27B3B72D0028A6CE /* branch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = branch.json; sourceTree = "<group>"; };
 		CEAFFFCC27B3B72E0028A6CE /* big_tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = big_tree.json; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				CE14664E25CAB12A000D89A9 /* LaunchScreen.storyboard */,
 				5DC27FB726E5F56A00D6A230 /* 75406-looped-404-error-animation.json */,
 				CE14665125CAB12A000D89A9 /* Info.plist */,
+				CE7A637A293660D20048FF26 /* Clock-Alarm02-mp3.zip */,
 				CE98BC9025D3C32000C94160 /* ResultViewController.swift */,
 				CE4C69BB2732A423001AB6AD /* ResultShareViewController.swift */,
 				CE4C69FD2745046D001AB6AD /* ResultSaveViewController.swift */,
@@ -352,6 +355,7 @@
 				CEAFFFD727B3B7330028A6CE /* tiny_branch.json in Resources */,
 				CE4C69BE273BDF0C001AB6AD /* 03original animation.json in Resources */,
 				CEAFFFD827B3B7330028A6CE /* large_tree.json in Resources */,
+				CE7A637B293660D20048FF26 /* Clock-Alarm02-mp3.zip in Resources */,
 				CEAFFFD227B3B7330028A6CE /* branch.json in Resources */,
 				CEAFFFD327B3B7330028A6CE /* big_tree.json in Resources */,
 			);

@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RestViewController: UIViewController {
+    
+    let soundPlayer = try!AVAudioPlayer(data: NSDataAsset(name: "Clock-Alarm02-mp3")!.data)
     
     @IBOutlet var label:UILabel!
     var count: Int = 300
@@ -17,6 +20,8 @@ class RestViewController: UIViewController {
     
     @IBAction func back(){
         navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
+        
+        soundPlayer.stop()
     }
 
     @objc func down() {
@@ -51,6 +56,11 @@ class RestViewController: UIViewController {
         label.text = String(format: "%02d:%02d", minutes, seconds)
         // Do any additional setup after loading the view.
         
+        if count == 0{
+            timer.invalidate()
+            soundPlayer.currentTime = 0
+            soundPlayer.play()
+        }
     }
 
 
