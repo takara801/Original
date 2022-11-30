@@ -189,19 +189,19 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
     func addAnimationView() {
 
         //アニメーションファイルの指定
-        animationView = AnimationView(name: "bud") //ここに先ほどダウンロードしたファイル名を記述（拡張子は必要なし）
-
+        animationView = AnimationView(name: "bud")
+        //ここに先ほどダウンロードしたファイル名を記述（拡張子は必要なし）
         if timeCount == 5 {
             animationView = AnimationView(name: "tiny_branch")
-        }else if timeCount == 10 && timeCount > 5 {
+        }else if timeCount == 10 {
             animationView = AnimationView(name: "branch")
-        }else if timeCount == 15 && timeCount > 10 {
+        }else if timeCount == 15 {
             animationView = AnimationView(name: "large_branch")
-        }else if timeCount == 20 && timeCount > 15 {
+        }else if timeCount == 20 {
             animationView = AnimationView(name: "tree")
-        }else if timeCount == 25 && timeCount > 20 {
+        }else if timeCount == 25 {
             animationView = AnimationView(name: "big_tree")
-        }else if timeCount == 30 && timeCount > 25 {
+        }else if timeCount == 30 {
             animationView = AnimationView(name: "large_tree")
         }
     
@@ -222,7 +222,7 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
    
     
     func changeImage(){
-        if timeCount == 10 || timeCount == 15 || timeCount == 20{
+        if timeCount == 5 || timeCount == 10 || timeCount == 15 || timeCount == 20 || timeCount == 25 || timeCount == 30{
             animationView.removeFromSuperview()
             addAnimationView()
             

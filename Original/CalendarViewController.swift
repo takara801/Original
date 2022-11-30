@@ -24,6 +24,9 @@ class CalendarViewController: UIViewController, FSCalendarDataSource ,FSCalendar
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        calendar.allowsSelection = false
+        calendar.appearance.headerDateFormat = "yyyy年MM月"
+        
         
 //        let userData = realm.objects(Memo.self)
 //        print("🟥全てのデータ\(userData)")

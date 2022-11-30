@@ -10,7 +10,7 @@ import AVFoundation
 
 class RestViewController: UIViewController {
     
-    let soundPlayer = try!AVAudioPlayer(data: NSDataAsset(name: "Clock-Alarm02-mp3")!.data)
+    let soundPlayer = try!AVAudioPlayer(data: NSDataAsset(name: "alarm")!.data)
     
     @IBOutlet var label:UILabel!
     var count: Int = 300

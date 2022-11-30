@@ -75,8 +75,26 @@ class ViewController: UIViewController, UITextFieldDelegate,UIPickerViewDelegate
     @IBOutlet var start:UILabel!
     
     @IBAction func go (){
-        performSegue(withIdentifier: "toView", sender: nil)
+//        performSegue(withIdentifier: "toView", sender: nil)
         
+        if mokuhyouTextField.text == "" {
+            //alertを出す
+            let alert: UIAlertController = UIAlertController(title: "目標を記入されていません", message: "目標を記入してから始めよう！", preferredStyle: .alert)
+            
+            //OKボタン
+            alert.addAction(
+                UIAlertAction(
+                    title: "はい",
+                    style: .default,
+                    handler: nil
+                    
+                )
+            )
+            present(alert,animated: true,completion: nil)
+            
+        }else{
+            performSegue(withIdentifier: "toView", sender: nil)
+        }
     }
     
     
