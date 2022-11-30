@@ -59,6 +59,7 @@ class RestViewController: UIViewController {
         if count == 0{
             timer.invalidate()
             soundPlayer.currentTime = 0
+            soundPlayer.numberOfLoops = -1
             soundPlayer.play()
         }
     }
