@@ -38,6 +38,13 @@ class ResultSaveViewController: UIViewController {
         try! realm.write {
             realm.add(memo)
         }
+       
+        let alert: UIAlertController = UIAlertController(title: "お疲れ様です！", message:"保存しました", preferredStyle: .alert)
+        alert.addAction(
+            UIAlertAction(title: "OK", style: .default, handler: { action in self.navigationController?.popToRootViewController(animated: true)})
+        )
+        present(alert,animated: true,completion: nil)
+        
         
     }
     
@@ -78,6 +85,14 @@ class ResultSaveViewController: UIViewController {
             realm.add(memo)
         }
         
+        
+//        let alert: UIAlertController = UIAlertController(title: "お疲れ様です！", message:"保存しました", preferredStyle: .alert)
+//        alert.addAction(
+//            UIAlertAction(title: "OK", style: .default, handler: { action in self.navigationController?.popToRootViewController(animated: true)})
+//        )
+//        present(alert,animated: true,completion: nil)
+//
+        
         let formatter = DateFormatter()
             formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "MM/dd", options: 0, locale: Locale(identifier: "ja_JP"))
             print(formatter.string(from: Date()))
@@ -111,12 +126,15 @@ class ResultSaveViewController: UIViewController {
         textField.resignFirstResponder()
     }
         
-        let alert: UIAlertController = UIAlertController(title: "お疲れ様です！", message:"保存しました", preferredStyle: .alert)
-        alert.addAction(
-            UIAlertAction(title: "OK", style: .default, handler: { action in self.navigationController?.popToRootViewController(animated: true)})
-        )
-        present(alert, animated: true, completion: nil)
+//        let alert: UIAlertController = UIAlertController(title: "お疲れ様です！", message:"保存しました", preferredStyle: .alert)
+//        alert.addAction(
+//            UIAlertAction(title: "OK", style: .default, handler: { action in self.navigationController?.popToRootViewController(animated: true)})
+//        )
+//        present(alert, animated: true, completion: nil)
+    
+    
     }
+
     
     
     

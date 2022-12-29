@@ -39,16 +39,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="beO-AE-r31" kind="presentation" id="j2K-uJ-YtK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsK-aT-wPV">
-                                <rect key="frame" x="36" y="548" width="96" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="カレンダー"/>
-                                <connections>
-                                    <segue destination="FT5-6u-Een" kind="show" id="sq0-oA-l3r"/>
+                                    <segue destination="FT5-6u-Een" kind="show" id="fDv-Cl-5K1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iol-2V-kVL">
@@ -122,7 +113,7 @@
             <objects>
                 <viewController id="beO-AE-r31" customClass="ResultRealmViewController" customModule="Original" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ax-4v-Yi5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="svi-hZ-5L3">
@@ -272,7 +263,7 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjI-TF-olI">
-                                <rect key="frame" x="100" y="133" width="214" height="48"/>
+                                <rect key="frame" x="121.5" y="133" width="171" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                 <color key="textColor" red="0.24702778459999999" green="0.24707666040000001" blue="0.2470246851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -306,8 +297,6 @@
                             <constraint firstItem="xjI-TF-olI" firstAttribute="top" secondItem="g9R-BI-n9E" secondAttribute="bottom" constant="6" id="PC5-ly-FkE"/>
                             <constraint firstItem="74L-uq-6t3" firstAttribute="bottom" secondItem="D7l-Yc-iFN" secondAttribute="bottom" constant="32" id="S2r-gf-PfH"/>
                             <constraint firstItem="g9R-BI-n9E" firstAttribute="centerX" secondItem="8Du-sb-75b" secondAttribute="centerX" id="XMd-KC-BNz"/>
-                            <constraint firstItem="xjI-TF-olI" firstAttribute="leading" secondItem="74L-uq-6t3" secondAttribute="leading" constant="100" id="ZOE-ME-hly"/>
-                            <constraint firstItem="74L-uq-6t3" firstAttribute="trailing" secondItem="xjI-TF-olI" secondAttribute="trailing" constant="100" id="s4c-bo-HQB"/>
                             <constraint firstItem="D7l-Yc-iFN" firstAttribute="centerX" secondItem="8Du-sb-75b" secondAttribute="centerX" id="y45-5G-bHt"/>
                         </constraints>
                     </view>
@@ -357,7 +346,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGn-XL-14i">
-                                <rect key="frame" x="54" y="404" width="306" height="120"/>
+                                <rect key="frame" x="71" y="404" width="272.5" height="120"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="100"/>
                                 <color key="textColor" red="0.22436302899999999" green="0.49580472710000001" blue="0.99868661169999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -367,11 +356,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UGn-XL-14i" firstAttribute="centerX" secondItem="Gme-T4-q9E" secondAttribute="centerX" id="7gG-mV-uar"/>
-                            <constraint firstItem="UGn-XL-14i" firstAttribute="leading" secondItem="Asx-Zh-oHM" secondAttribute="leading" constant="54" id="DQM-1p-Fhc"/>
                             <constraint firstItem="5jr-VE-hLz" firstAttribute="centerX" secondItem="Gme-T4-q9E" secondAttribute="centerX" id="ULf-Sj-qAz"/>
                             <constraint firstItem="Asx-Zh-oHM" firstAttribute="trailing" secondItem="5jr-VE-hLz" secondAttribute="trailing" constant="54" id="W1D-zO-kVH"/>
                             <constraint firstItem="d1C-SD-ghu" firstAttribute="centerX" secondItem="Gme-T4-q9E" secondAttribute="centerX" id="ZNP-cA-zeN"/>
-                            <constraint firstItem="Asx-Zh-oHM" firstAttribute="trailing" secondItem="UGn-XL-14i" secondAttribute="trailing" constant="54" id="pMM-O7-LuF"/>
                             <constraint firstItem="d1C-SD-ghu" firstAttribute="top" secondItem="UGn-XL-14i" secondAttribute="bottom" constant="220" id="qli-u0-MTx"/>
                             <constraint firstItem="d1C-SD-ghu" firstAttribute="top" secondItem="5jr-VE-hLz" secondAttribute="bottom" constant="329" id="ryC-cH-vTt"/>
                             <constraint firstItem="Asx-Zh-oHM" firstAttribute="bottom" secondItem="d1C-SD-ghu" secondAttribute="bottom" constant="70" id="svi-fi-mO1"/>
@@ -395,8 +382,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="無題49-20221129190838" translatesAutoresizingMaskIntoConstraints="NO" id="S1D-09-bCI">
+                                <rect key="frame" x="65" y="621" width="284" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="QyW-Ek-5Wx"/>
+                                    <constraint firstAttribute="height" constant="275" id="cQf-ro-OmZ"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msV-lS-6Zx" customClass="FSCalendar">
-                                <rect key="frame" x="10" y="134" width="394" height="532"/>
+                                <rect key="frame" x="10" y="128" width="394" height="532"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
@@ -414,23 +408,16 @@
                                     <outlet property="delegate" destination="FT5-6u-Een" id="YyC-Xi-Seu"/>
                                 </connections>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="無題49-20221129190838" translatesAutoresizingMaskIntoConstraints="NO" id="S1D-09-bCI">
-                                <rect key="frame" x="65" y="621" width="284" height="275"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="284" id="QyW-Ek-5Wx"/>
-                                    <constraint firstAttribute="height" constant="275" id="cQf-ro-OmZ"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uot-yG-riY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="msV-lS-6Zx" firstAttribute="top" secondItem="uxP-Ct-csm" secondAttribute="top" constant="134" id="E4b-Gf-KY3"/>
                             <constraint firstAttribute="bottom" secondItem="S1D-09-bCI" secondAttribute="bottom" id="GXN-rM-ePq"/>
                             <constraint firstItem="msV-lS-6Zx" firstAttribute="leading" secondItem="Uot-yG-riY" secondAttribute="leading" constant="10" id="Pdu-mx-azd"/>
-                            <constraint firstItem="Uot-yG-riY" firstAttribute="bottom" secondItem="msV-lS-6Zx" secondAttribute="bottom" constant="196" id="fpr-0a-LwN"/>
                             <constraint firstItem="S1D-09-bCI" firstAttribute="centerX" secondItem="uxP-Ct-csm" secondAttribute="centerX" id="iBO-Ah-kF1"/>
                             <constraint firstItem="Uot-yG-riY" firstAttribute="trailing" secondItem="msV-lS-6Zx" secondAttribute="trailing" constant="10" id="pIA-I9-Gjr"/>
+                            <constraint firstItem="Uot-yG-riY" firstAttribute="bottom" secondItem="msV-lS-6Zx" secondAttribute="bottom" constant="202" id="rmj-65-Gab"/>
+                            <constraint firstItem="msV-lS-6Zx" firstAttribute="top" secondItem="uxP-Ct-csm" secondAttribute="top" constant="128" id="ynD-Lr-P8C"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dut-ss-DDI"/>
@@ -554,7 +541,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="addButtonAction:" destination="uTO-lz-7QM" eventType="touchUpInside" id="beb-YC-3UC"/>
-                                            <action selector="backToTop" destination="uTO-lz-7QM" eventType="touchUpInside" id="EZf-Mz-vDs"/>
                                         </connections>
                                     </button>
                                 </subviews>

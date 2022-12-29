@@ -59,6 +59,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UIPickerViewDelegate
         pickerView.delegate = self
         pickerView.dataSource = self
         mokuhyouTextField.placeholder = "目標を入力 "
+        mokuhyouTextField.delegate = self
         
 //        インスタンス化
        let ovalView = DrawView(frame: self.view.bounds)
@@ -72,6 +73,11 @@ class ViewController: UIViewController, UITextFieldDelegate,UIPickerViewDelegate
         
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     @IBOutlet var start:UILabel!
     
     @IBAction func go (){
@@ -126,3 +132,5 @@ class DrawView: UIView {
     }
 
 }
+
+

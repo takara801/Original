@@ -116,12 +116,14 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.hidesBackButton = true
+//        self.navigationItem.hidesBackButton = true
         
         mokuhyouLabel.text = mokuhyou
         
         //アニメーションの呼び出し
-        addAnimationView()
+        addAnimationView(timeIndex: 0)
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
        
     }
 
@@ -138,6 +140,8 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
     
     //タイマーを開始するメソッド
     @IBAction func start () {
+        
+        self.navigationItem.hidesBackButton = true
         
         print("Timing started!")
         animationView.play()
@@ -161,12 +165,16 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
         let seconds = timeCount % 60
         countLabel.text = String(format: "%02d:%02d:%02d%", hours, minutes, seconds)
         
-        changeImage()
+        let changetimeArray = [0,600,1800,3600,6000,8400,11400]
         
-        animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = .loop
-        animationView.play()
-        
+        if let timeIndex = changetimeArray.firstIndex(of: timeCount){
+            animationView.removeFromSuperview()
+            addAnimationView(timeIndex: timeIndex)
+            animationView.contentMode = .scaleAspectFill
+            animationView.loopMode = .loop
+            animationView.play()
+        }
+            
     }
     
     
@@ -191,17 +199,17 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
         //アニメーションファイルの指定
         animationView = AnimationView(name: "bud")
         //ここに先ほどダウンロードしたファイル名を記述（拡張子は必要なし）
-        if timeCount == 5 {
+        if timeCount == 600 {
             animationView = AnimationView(name: "tiny_branch")
-        }else if timeCount == 10 {
+        }else if timeCount == 1800 {
             animationView = AnimationView(name: "branch")
-        }else if timeCount == 15 {
+        }else if timeCount == 3600 {
             animationView = AnimationView(name: "large_branch")
-        }else if timeCount == 20 {
+        }else if timeCount == 6000 {
             animationView = AnimationView(name: "tree")
-        }else if timeCount == 25 {
+        }else if timeCount == 8400 {
             animationView = AnimationView(name: "big_tree")
-        }else if timeCount == 30 {
+        }else if timeCount == 11400 {
             animationView = AnimationView(name: "large_tree")
         }
     
@@ -221,31 +229,32 @@ class ResultViewController: UIViewController,UITextFieldDelegate {
     
    
     
-    func changeImage(){
-        if timeCount == 5 || timeCount == 10 || timeCount == 15 || timeCount == 20 || timeCount == 25 || timeCount == 30{
-            animationView.removeFromSuperview()
-            addAnimationView()
+    //アニメーションの準備
+    //アニメーションの準備
+        func addAnimationView(timeIndex: Int) {
+
+            //アニメーションファイルの指定
+            let filenameArray = ["bud","tiny_branch","branch","large_branch","tree","big_tree","large_tree"]
+            let widthArray = [100.0,150.0,150.0,210.0,210.0,320.0,360.0]
+            let heightArray = [100.0,150.0,180.0,230.0,230.0,350.0,400.0]
             
+            
+            animationView = AnimationView(name: filenameArray[timeIndex])
+            
+            
+            let width = widthArray[timeIndex]
+            let height = heightArray[timeIndex]
+            let viewHeight = view.frame.size.height
+            let x = (view.frame.size.width -  width)/2
+            let y = 47 * viewHeight/60 - height
+
+            //アニメーションの位置指定（画面中央）
+            animationView.frame = CGRect(x: x, y: y, width: width, height: height)
+
+
+            //ViewControllerに配置
+            view.addSubview(animationView)
         }
-//     if count <= 10 {
-//
-//      }else if count <= 15 && count > 10 {
-//        treeImageView.image = UIImage(named: "tree2")
-//      }else if count <= 20 && count > 15 {
-//        treeImageView.image = UIImage(named: "tree3")
-//      }else if count <= 25 && count > 20 {
-//        treeImageView.image = UIImage(named: "tree1")
-//      }else if count <= 30 && count > 25 {
-//        treeImageView.image = UIImage(named: "tree2")
-//      }else if count <= 35 && count > 30 {
-//        treeImageView.image = UIImage(named: "tree3")
-//    }
-//}
-    
-    
-    
-    
-}
 
 
 }

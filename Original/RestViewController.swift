@@ -57,10 +57,16 @@ class RestViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         if count == 0{
-            timer.invalidate()
-            soundPlayer.currentTime = 0
-            soundPlayer.numberOfLoops = -1
-            soundPlayer.play()
+//            timer.invalidate()
+//            soundPlayer.currentTime = 0
+//            soundPlayer.numberOfLoops = -1
+//            soundPlayer.play()
+            
+            let alermSoundPlayer = try! AVAudioPlayer(data: NSDataAsset(name:"Clock-Alarm02-1(Loop)")!.data)
+            alermSoundPlayer.currentTime = 0
+            alermSoundPlayer.play()
+            alermSoundPlayer.numberOfLoops = -1
+            
         }
     }
 
